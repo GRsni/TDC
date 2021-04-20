@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../project_20.srcs/sources_1/new/PRESCALER_1Hz.vhd" \
+"../../../../project_20.srcs/sim_1/new/PRESCALER_1Hz_TB.vhd" \
+
+# Do not sort compile order
+nosort

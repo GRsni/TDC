@@ -1,0 +1,1 @@
+-wto "5833225977684072864af2d1bf9a321a" --incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "secureip" --snapshot "PRESCALER_1Hz_tb_behav" "xil_defaultlib.PRESCALER_1Hz_tb" -log "elaborate.log" 
