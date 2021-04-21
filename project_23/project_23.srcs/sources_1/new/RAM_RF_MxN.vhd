@@ -33,7 +33,7 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity RAM_RF_MxN is
     Generic ( DATA_WIDTH:positive:=4;
-              ADDR_WIDTH:positive:=10);
+              ADDR_WIDTH:positive:=4);
     Port ( DATA_RAM_i : in STD_LOGIC_VECTOR (DATA_WIDTH-1 downto 0);
            ADDR_RAM_i : in STD_LOGIC_VECTOR (ADDR_WIDTH-1 downto 0);
            WE_i : in STD_LOGIC;
