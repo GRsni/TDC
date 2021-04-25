@@ -63,8 +63,8 @@ architecture Behavioral of DATA_PATH_0 is
                 9=> "1111",
                 others=>"0000");
     signal DATA_BUS: std_logic_vector(DATA_WIDTH-1 downto 0);
-    signal reg_A: unsigned(DATA_WIDTH downto 0);--dummy
-    signal reg_B: unsigned(DATA_WIDTH downto 0);--dummy
+    signal reg_A: unsigned(DATA_WIDTH-1 downto 0);--dummy
+    signal reg_B: unsigned(DATA_WIDTH-1 downto 0);--dummy
     signal FZ: std_logic;
     signal result: unsigned(DATA_WIDTH downto 0);
     constant ZEROu: unsigned(DATA_WIDTH downto 0):=(others=>'0'); 
@@ -89,7 +89,7 @@ begin
             reg_A<=ZEROu;
         elsif rising_edge(CLK_i) then
             if( CW_i(2)='1') then
-                reg_A<='0' & unsigned(DATA_BUS);
+                reg_A<= unsigned(DATA_BUS);
             end if;
         end if;
     end process;
@@ -100,7 +100,7 @@ begin
             reg_B<=ZEROu;
         elsif rising_edge(CLK_i) then
             if(CW_i(1)='1') then
-                reg_B<='0' & unsigned(DATA_BUS);
+                reg_B<=unsigned(DATA_BUS);
             end if;
         end if;
     end process;
@@ -129,10 +129,10 @@ begin
     REG_B_o <=std_logic_vector(reg_B(DATA_WIDTH-1 downto 0));
     
     with CW_i(CW_WIDTH-1 downto CW_WIDTH-N_ALU) select
-            result<=  '0' & unsigned(DATA_BUS) when "00",
-                       '0' & unsigned(DATA_BUS)+1 when "01",
-                       reg_A+reg_B when "10",
-                       reg_A-reg_B when "11",
+            result<=   reg_A when "00",
+                       reg_A + 1 when "01",
+                       reg_A + reg_B when "10",
+                       reg_A - reg_B when "11",
                        ZEROu when others;
     
     --Asignamos el resultado de la ALU a la salida

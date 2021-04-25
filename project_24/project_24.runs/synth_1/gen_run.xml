@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1619007020">
   <File Type="PA-TCL" Name="TOP_01.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="TOP_01_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="TOP_01_reports.tcl"/>
   <File Type="RDS-RDS" Name="TOP_01.vds"/>
-  <File Type="RDS-UTIL" Name="TOP_01_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="TOP_01_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="TOP_01.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="TOP_01_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="TOP_01_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/imports/sources_1/imports/sources_1/imports/TDC/project_17/project_17.srcs/sources_1/new/COUNTER_N_bits.vhd">
