@@ -86,7 +86,7 @@ begin
     load_REG_A: process(RST_i, CLK_i)
     begin
         if( RST_i = '1') then
-            reg_A<=ZEROu;
+            reg_A<=ZEROu(DATA_WIDTH-1 downto 0);
         elsif rising_edge(CLK_i) then
             if( CW_i(2)='1') then
                 reg_A<= unsigned(DATA_BUS);
@@ -97,7 +97,7 @@ begin
     load_reg_B: process(RST_i, CLK_i) 
     begin
         if( RST_i='1') then
-            reg_B<=ZEROu;
+            reg_B<=ZEROu(DATA_WIDTH-1 downto 0);
         elsif rising_edge(CLK_i) then
             if(CW_i(1)='1') then
                 reg_B<=unsigned(DATA_BUS);
@@ -116,8 +116,6 @@ begin
                 else 
                     FZ<='0';
                 end if;
-            else
-                FZ<='0';
             end if;
        end if;
     end process;
@@ -129,10 +127,10 @@ begin
     REG_B_o <=std_logic_vector(reg_B(DATA_WIDTH-1 downto 0));
     
     with CW_i(CW_WIDTH-1 downto CW_WIDTH-N_ALU) select
-            result<=   reg_A when "00",
-                       reg_A + 1 when "01",
-                       reg_A + reg_B when "10",
-                       reg_A - reg_B when "11",
+            result<=   '0' & reg_A when "00",
+                       '0' & (reg_A + 1)when "01",
+                       '0' & (reg_A + reg_B) when "10",
+                       '0' & (reg_A - reg_B) when "11",
                        ZEROu when others;
     
     --Asignamos el resultado de la ALU a la salida

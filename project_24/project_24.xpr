@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="38" Path="C:/GII/TDC/project_24/project_24.xpr">
+<Project Version="7" Minor="38" Path="C:/Users/TDC/Desktop/TDC/project_24/project_24.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="3f0362ca1a6f4dbaba541e015eb7c9dd"/>
