@@ -104,16 +104,73 @@ begin
 
     -- Put test bench stimulus code here
 
-    CW_i<="0011010000";
+    CW_i<="0001010000"; --Load instruction ADD A,B
     wait for 10 ns;
     
-    CW_i<="0000000100";
+    CW_i<="0000000000"; --Wait for DATA_BUS to update
+    wait for 10 ns;     
+    
+    CW_i<="0000000100"; --Load REGISTER A
+    wait for 10 ns;     
+    
+    CW_i<="0000100000"; --Load [addr1] value from RAM into DATA_BUS
     wait for 10 ns;
     
-    CW_i<="0000100010";
+    CW_i<="0000100010"; --Load [addr2] value in DATA_BUS into REGISTER B 
     wait for 10 ns;
     
-    CW_i<="1000101001";
+    CW_i<="1000101001"; --Load ALU result into RAM(ADDR2) and update FZ
+    wait for 10 ns;
+    
+    CW_i<="0001010000"; --Load instruction MOV A
+    wait for 10 ns;
+    
+    CW_i<="0000000000"; --Wait for DATA_BUS to update
+    wait for 10 ns;    
+    
+    CW_i<="0000000100"; --Load [addr1] value into REGISTER A
+    wait for 10 ns;
+    
+    CW_i<="0000101001"; --Save REGISTER A into (addr2)
+    wait for 10 ns;
+
+    CW_i<="0001010000"; --Load instruction INC A
+    wait for 10 ns;
+    
+    CW_i<="0000000000"; --Wait for DATA_BUS to update
+    wait for 10 ns;
+    
+    CW_i<="0000000100"; --Load [addr1] value into REGISTER A
+    wait for 10 ns;
+    
+    CW_i<="0100001001"; --INC A and store in (addr1)
+    wait for 10 ns;
+    
+    CW_i<="0001010000"; --Load instruction SUB A,B
+    wait for 10 ns;
+    
+    CW_I<="0000000000"; --Wait for DATA_BUS to update
+    wait for 10 ns;
+    
+    CW_i<="0000000100"; --Load [addr1] into REGISTER A
+    wait for 10 ns;
+    
+    CW_i<="0000100000"; --Load [addr2] into DATA_BUS
+    wait for 10 ns;
+    
+    CW_i<="0000100010"; --Load [addr2] into REGISTER B
+    wait for 10 ns;
+    
+    CW_i<="1100101001"; --SUB A,B and store in (addr2)
+    wait for 10 ns;
+    
+    CW_i<="0001010000"; --Load instruction BEZ addr2
+    wait for 10 ns;     
+    
+    CW_i<="0000000000"; --Wait for DATA_BUS to update
+    wait for 10 ns;
+    
+    CW_i<="0010100000"; --Load (addr2) into REGISTER PC
     wait for 10 ns;
 
     stop_the_clock <= true;
