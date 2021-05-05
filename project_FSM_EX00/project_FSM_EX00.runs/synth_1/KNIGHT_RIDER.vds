@@ -1,0 +1,335 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Wed May  5 14:17:07 2021
+# Process ID: 16696
+# Current directory: C:/Users/TDC/Desktop/TDC/project_FSM_EX00/project_FSM_EX00.runs/synth_1
+# Command line: vivado.exe -log KNIGHT_RIDER.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source KNIGHT_RIDER.tcl
+# Log file: C:/Users/TDC/Desktop/TDC/project_FSM_EX00/project_FSM_EX00.runs/synth_1/KNIGHT_RIDER.vds
+# Journal file: C:/Users/TDC/Desktop/TDC/project_FSM_EX00/project_FSM_EX00.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source KNIGHT_RIDER.tcl -notrace
+Command: synth_design -top KNIGHT_RIDER -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 3564 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 342.648 ; gain = 100.098
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'KNIGHT_RIDER' [C:/Users/TDC/Desktop/TDC/project_FSM_EX00/project_FSM_EX00.srcs/sources_1/new/KNIGHT_RIDER.vhd:41]
+	Parameter LED_COUNT bound to: 16 - type: integer 
+	Parameter LED_COUNT bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'FSM_KNIGHT' declared at 'C:/Users/TDC/Desktop/TDC/project_FSM_EX00/project_FSM_EX00.srcs/sources_1/new/FSM_KNIGHT.vhd:34' bound to instance 'FSM' of component 'FSM_KNIGHT' [C:/Users/TDC/Desktop/TDC/project_FSM_EX00/project_FSM_EX00.srcs/sources_1/new/KNIGHT_RIDER.vhd:73]
+INFO: [Synth 8-638] synthesizing module 'FSM_KNIGHT' [C:/Users/TDC/Desktop/TDC/project_FSM_EX00/project_FSM_EX00.srcs/sources_1/new/FSM_KNIGHT.vhd:42]
+	Parameter LED_COUNT bound to: 16 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'FSM_KNIGHT' (1#1) [C:/Users/TDC/Desktop/TDC/project_FSM_EX00/project_FSM_EX00.srcs/sources_1/new/FSM_KNIGHT.vhd:42]
+	Parameter END_COUNT bound to: 10000000 - type: integer 
+INFO: [Synth 8-3491] module 'CE_N_Hz' declared at 'C:/Users/TDC/Desktop/TDC/project_FSM_EX00/project_FSM_EX00.srcs/sources_1/imports/new/CE_N_Hz.vhd:34' bound to instance 'CE_10_HZ' of component 'CE_N_Hz' [C:/Users/TDC/Desktop/TDC/project_FSM_EX00/project_FSM_EX00.srcs/sources_1/new/KNIGHT_RIDER.vhd:80]
+INFO: [Synth 8-638] synthesizing module 'CE_N_Hz' [C:/Users/TDC/Desktop/TDC/project_FSM_EX00/project_FSM_EX00.srcs/sources_1/imports/new/CE_N_Hz.vhd:41]
+	Parameter END_COUNT bound to: 10000000 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'CE_N_Hz' (2#1) [C:/Users/TDC/Desktop/TDC/project_FSM_EX00/project_FSM_EX00.srcs/sources_1/imports/new/CE_N_Hz.vhd:41]
+	Parameter LED_COUNT bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'ROT_REG' declared at 'C:/Users/TDC/Desktop/TDC/project_FSM_EX00/project_FSM_EX00.srcs/sources_1/new/ROT_REG.vhd:34' bound to instance 'ROT' of component 'ROT_REG' [C:/Users/TDC/Desktop/TDC/project_FSM_EX00/project_FSM_EX00.srcs/sources_1/new/KNIGHT_RIDER.vhd:86]
+INFO: [Synth 8-638] synthesizing module 'ROT_REG' [C:/Users/TDC/Desktop/TDC/project_FSM_EX00/project_FSM_EX00.srcs/sources_1/new/ROT_REG.vhd:43]
+	Parameter LED_COUNT bound to: 16 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'ROT_REG' (3#1) [C:/Users/TDC/Desktop/TDC/project_FSM_EX00/project_FSM_EX00.srcs/sources_1/new/ROT_REG.vhd:43]
+INFO: [Synth 8-256] done synthesizing module 'KNIGHT_RIDER' (4#1) [C:/Users/TDC/Desktop/TDC/project_FSM_EX00/project_FSM_EX00.srcs/sources_1/new/KNIGHT_RIDER.vhd:41]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 397.152 ; gain = 154.602
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 397.152 ; gain = 154.602
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 397.152 ; gain = 154.602
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/TDC/Desktop/TDC/project_FSM_EX00/project_FSM_EX00.srcs/constrs_1/imports/project_FSM_EX00/Nexys-4-DDR-Master.xdc]
+Finished Parsing XDC File [C:/Users/TDC/Desktop/TDC/project_FSM_EX00/project_FSM_EX00.srcs/constrs_1/imports/project_FSM_EX00/Nexys-4-DDR-Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/TDC/Desktop/TDC/project_FSM_EX00/project_FSM_EX00.srcs/constrs_1/imports/project_FSM_EX00/Nexys-4-DDR-Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/KNIGHT_RIDER_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/KNIGHT_RIDER_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 729.488 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 729.488 ; gain = 486.938
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 729.488 ; gain = 486.938
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 729.488 ; gain = 486.938
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'State_reg' in module 'FSM_KNIGHT'
+INFO: [Synth 8-5546] ROM "State" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "State" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "L_R_o" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "State" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "CLK_N_Hz_o" won't be mapped to RAM because it is too sparse
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    inic |                              001 |                               00
+               move_left |                              010 |                               01
+              move_right |                              100 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'State_reg' using encoding 'one-hot' in module 'FSM_KNIGHT'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 729.488 ; gain = 486.938
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     24 Bit       Adders := 1     
++---Registers : 
+	               24 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     24 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 1     
+	   3 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	   3 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module FSM_KNIGHT 
+Detailed RTL Component Info : 
++---Muxes : 
+	   3 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+	   3 Input      1 Bit        Muxes := 1     
+Module CE_N_Hz 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     24 Bit       Adders := 1     
++---Registers : 
+	               24 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     24 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module ROT_REG 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5546] ROM "FSM/State" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "FSM/State" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "CE_10_HZ/CLK_N_Hz_o" won't be mapped to RAM because it is too sparse
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 729.488 ; gain = 486.938
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 735.133 ; gain = 492.582
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 755.535 ; gain = 512.984
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 755.535 ; gain = 512.984
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 755.535 ; gain = 512.984
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 755.535 ; gain = 512.984
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 755.535 ; gain = 512.984
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 755.535 ; gain = 512.984
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 755.535 ; gain = 512.984
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 755.535 ; gain = 512.984
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |     6|
+|3     |LUT1   |     2|
+|4     |LUT2   |    26|
+|5     |LUT3   |    15|
+|6     |LUT4   |     8|
+|7     |LUT6   |     4|
+|8     |FDCE   |    42|
+|9     |FDPE   |     2|
+|10    |IBUF   |     2|
+|11    |OBUF   |    16|
++------+-------+------+
+
+Report Instance Areas: 
++------+-----------+-----------+------+
+|      |Instance   |Module     |Cells |
++------+-----------+-----------+------+
+|1     |top        |           |   124|
+|2     |  CE_10_HZ |CE_N_Hz    |    63|
+|3     |  FSM      |FSM_KNIGHT |     7|
+|4     |  ROT      |ROT_REG    |    35|
++------+-----------+-----------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 755.535 ; gain = 512.984
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:19 . Memory (MB): peak = 755.535 ; gain = 180.648
+Synthesis Optimization Complete : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 755.535 ; gain = 512.984
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 8 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+33 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 758.555 ; gain = 529.129
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/TDC/Desktop/TDC/project_FSM_EX00/project_FSM_EX00.runs/synth_1/KNIGHT_RIDER.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file KNIGHT_RIDER_utilization_synth.rpt -pb KNIGHT_RIDER_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.036 . Memory (MB): peak = 758.555 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Wed May  5 14:17:40 2021...

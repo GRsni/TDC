@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1620217024">
+  <File Type="BITSTR-BMM" Name="KNIGHT_RIDER_bd.bmm"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="KNIGHT_RIDER_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="KNIGHT_RIDER_timing_summary_init.rpt"/>
+  <File Type="ROUTE-PWR" Name="KNIGHT_RIDER_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="KNIGHT_RIDER.tcl"/>
+  <File Type="OPT-TIMING" Name="KNIGHT_RIDER_timing_summary_opted.rpt"/>
+  <File Type="OPT-DCP" Name="KNIGHT_RIDER_opt.dcp"/>
+  <File Type="ROUTE-PWR-SUM" Name="KNIGHT_RIDER_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="KNIGHT_RIDER_reports.tcl"/>
+  <File Type="OPT-DRC" Name="KNIGHT_RIDER_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="KNIGHT_RIDER.hwdef"/>
+  <File Type="PWROPT-DCP" Name="KNIGHT_RIDER_pwropt.dcp"/>
+  <File Type="PWROPT-DRC" Name="KNIGHT_RIDER_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="KNIGHT_RIDER_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="KNIGHT_RIDER_placed.dcp"/>
+  <File Type="PLACE-IO" Name="KNIGHT_RIDER_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="KNIGHT_RIDER_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="KNIGHT_RIDER_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="KNIGHT_RIDER_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="KNIGHT_RIDER_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="KNIGHT_RIDER_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="KNIGHT_RIDER_incremental_reuse_pre_placed.rpt"/>
+  <File Type="BG-BGN" Name="KNIGHT_RIDER.bgn"/>
+  <File Type="PLACE-TIMING" Name="KNIGHT_RIDER_timing_summary_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="KNIGHT_RIDER_postplace_pwropt.dcp"/>
+  <File Type="BG-BIN" Name="KNIGHT_RIDER.bin"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="KNIGHT_RIDER_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="KNIGHT_RIDER_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="KNIGHT_RIDER_drc_physopted.rpt"/>
+  <File Type="BITSTR-MSK" Name="KNIGHT_RIDER.msk"/>
+  <File Type="PHYSOPT-TIMING" Name="KNIGHT_RIDER_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="KNIGHT_RIDER_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="KNIGHT_RIDER_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="KNIGHT_RIDER_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="KNIGHT_RIDER_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="KNIGHT_RIDER_drc_routed.pb"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="KNIGHT_RIDER.ltx"/>
+  <File Type="ROUTE-DRC-RPX" Name="KNIGHT_RIDER_drc_routed.rpx"/>
+  <File Type="BITSTR-MMI" Name="KNIGHT_RIDER.mmi"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="KNIGHT_RIDER_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="KNIGHT_RIDER_methodology_drc_routed.rpx"/>
+  <File Type="BITSTR-SYSDEF" Name="KNIGHT_RIDER.sysdef"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="KNIGHT_RIDER_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="KNIGHT_RIDER_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="KNIGHT_RIDER_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="KNIGHT_RIDER_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="KNIGHT_RIDER_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="KNIGHT_RIDER_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="KNIGHT_RIDER_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="KNIGHT_RIDER_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="KNIGHT_RIDER_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="KNIGHT_RIDER_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="KNIGHT_RIDER_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="KNIGHT_RIDER_bus_skew_routed.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="KNIGHT_RIDER_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="KNIGHT_RIDER_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="KNIGHT_RIDER_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="KNIGHT_RIDER_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="KNIGHT_RIDER_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="KNIGHT_RIDER_bus_skew_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="KNIGHT_RIDER_bus_skew_postroute_physopted.pb"/>
+  <File Type="BG-BIT" Name="KNIGHT_RIDER.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="KNIGHT_RIDER_bus_skew_postroute_physopted.rpx"/>
+  <File Type="BITSTR-RBT" Name="KNIGHT_RIDER.rbt"/>
+  <File Type="BITSTR-NKY" Name="KNIGHT_RIDER.nky"/>
+  <File Type="BG-DRC" Name="KNIGHT_RIDER.drc"/>
+  <File Type="RDI-RDI" Name="KNIGHT_RIDER.vdi"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/imports/new/CE_N_Hz.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../project_19/project_19.srcs/sources_1/new/CE_N_Hz.vhd"/>
+        <Attr Name="ImportTime" Val="1618995167"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/FSM_KNIGHT.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/ROT_REG.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/KNIGHT_RIDER.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="KNIGHT_RIDER"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/imports/project_FSM_EX00/Nexys-4-DDR-Master.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/Nexys-4-DDR-Master.xdc"/>
+        <Attr Name="ImportTime" Val="1618995165"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+</GenRun>

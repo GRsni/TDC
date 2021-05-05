@@ -35,7 +35,7 @@ entity KNIGHT_RIDER is
     Generic(LED_COUNT: integer:=16);
     Port ( CLK_i : in STD_LOGIC;
            RST_i : in STD_LOGIC;
-           LED_o : out STD_LOGIC_VECTOR (0 downto 0));
+           LED_o : out STD_LOGIC_VECTOR (LED_COUNT-1 downto 0));
 end KNIGHT_RIDER;
 
 architecture Behavioral of KNIGHT_RIDER is
