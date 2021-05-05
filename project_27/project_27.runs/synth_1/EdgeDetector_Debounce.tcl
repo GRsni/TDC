@@ -17,18 +17,22 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_param synth.incrementalSynthesisCache C:/Users/TDC/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-8076-ALESI1009/incrSyn
+set_msg_config -id {Common 17-41} -limit 10000000
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 create_project -in_memory -part xc7a100tcsg324-1
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir C:/GII/TDC/project_26/project_26.cache/wt [current_project]
-set_property parent.project_path C:/GII/TDC/project_26/project_26.xpr [current_project]
+set_property webtalk.parent_dir C:/Users/TDC/Desktop/TDC/project_27/project_27.cache/wt [current_project]
+set_property parent.project_path C:/Users/TDC/Desktop/TDC/project_27/project_27.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo c:/GII/TDC/project_26/project_26.cache/ip [current_project]
+set_property ip_output_repo c:/Users/TDC/Desktop/TDC/project_27/project_27.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-read_vhdl -library xil_defaultlib C:/GII/TDC/project_26/project_26.srcs/sources_1/new/DATA_PATH_0.vhd
+read_vhdl -library xil_defaultlib C:/Users/TDC/Desktop/TDC/project_27/project_27.srcs/sources_1/new/EdgeDetector_Debounce.vhd
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
 # design are intentionally left as such for best results. Dcp files will be
@@ -37,18 +41,15 @@ read_vhdl -library xil_defaultlib C:/GII/TDC/project_26/project_26.srcs/sources_
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc C:/GII/TDC/project_26/project_26.srcs/constrs_1/imports/project_24/TOP_01.xdc
-set_property used_in_implementation false [get_files C:/GII/TDC/project_26/project_26.srcs/constrs_1/imports/project_24/TOP_01.xdc]
-
 set_param ips.enableIPCacheLiteLoad 0
 close [open __synthesis_is_running__ w]
 
-synth_design -top DATA_PATH_0 -part xc7a100tcsg324-1
+synth_design -top EdgeDetector_Debounce -part xc7a100tcsg324-1
 
 
 # disable binary constraint mode for synth run checkpoints
 set_param constraints.enableBinaryConstraints false
-write_checkpoint -force -noxdef DATA_PATH_0.dcp
-create_report "synth_1_synth_report_utilization_0" "report_utilization -file DATA_PATH_0_utilization_synth.rpt -pb DATA_PATH_0_utilization_synth.pb"
+write_checkpoint -force -noxdef EdgeDetector_Debounce.dcp
+create_report "synth_1_synth_report_utilization_0" "report_utilization -file EdgeDetector_Debounce_utilization_synth.rpt -pb EdgeDetector_Debounce_utilization_synth.pb"
 file delete __synthesis_is_running__
 close [open __synthesis_is_complete__ w]
