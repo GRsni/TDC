@@ -38,7 +38,8 @@ entity TOP_01 is
             N_ALU: integer:=2;
            DATA_ROM_WIDTH:positive:=11;
            ADDR_ROM_WIDTH:positive:=4;
-           OP_CODE_WIDTH:integer:=3);
+           OP_CODE_WIDTH:integer:=3;
+           DEBOUNCE_TIMER:integer:=30000000);
     Port (  RST_i : in STD_LOGIC;
             CLK_i : in STD_LOGIC;
             CW_i : in STD_LOGIC_VECTOR (CW_WIDTH-1 downto 0);
@@ -87,6 +88,14 @@ component DISP8ON
            CATHODE_o : out STD_LOGIC_VECTOR (6 downto 0);
            ANODE_o : out STD_LOGIC_VECTOR (7 downto 0));
 end component;
+
+component EdgeDetector_Debounce 
+    Generic( TIMER: integer:=30000000);
+    Port ( CLK_i : in STD_LOGIC;
+           RST_i : in STD_LOGIC;
+           PUSH_i : in STD_LOGIC;
+           PULSE_o : out STD_LOGIC);
+end component;
     
     signal DATA0: STD_LOGIC_VECTOR(DATA_RAM_WIDTH-1 downto 0);--ALU_OUT
     signal DATA1: STD_LOGIC_VECTOR(DATA_RAM_WIDTH-1 downto 0);--REG_B
@@ -96,6 +105,8 @@ end component;
     signal DATA5: STD_LOGIC_VECTOR(DATA_RAM_WIDTH-1 downto 0);--PC_o
     signal DATA6: STD_LOGIC_VECTOR(DATA_RAM_WIDTH-1 downto 0);--DATA_BUS
     signal DATA7: STD_LOGIC_VECTOR(ADDR_RAM_WIDTH-1 downto 0);--ADDR_RAM
+    
+    signal CW_debounced: STD_LOGIC_VECTOR(CW_WIDTH-1 downto 0);
 begin
 
 DATA_PATH: DATA_PATH_0
@@ -108,7 +119,7 @@ DATA_PATH: DATA_PATH_0
    Port map(
              RST_i=>RST_i, 
              CLK_i=>CLK_i,
-             CW_i=>CW_i,
+             CW_i=>CW_debounced,
              ALU_RESULT_o=>DATA0, 
              REG_A_o =>DATA2,
              REG_B_o=>DATA1,
@@ -134,5 +145,17 @@ DISP7SEG8ON: DISP8ON
              CLK_i=>CLK_i,
              RST_i=>RST_i,
              CATHODE_o=>CATHODE_o,
-             ANODE_o=>ANODE_o); 
+             ANODE_o=>ANODE_o);
+             
+DEBOUNCE: EdgeDetector_Debounce
+    Generic map(TIMER=>DEBOUNCE_TIMER)
+    Port map(   
+            CLK_i =>CLK_i,
+            RST_i => RST_i,
+            PUSH_i => CW_i(6),
+            PULSE_o => CW_debounced(6));
+            
+ --Assign input CW to debounced CW minus the update PC bit
+ CW_debounced <= CW_i(9 downto 7) & CW_debounced(6) & CW_i(5 downto 0);
+ 
 end Behavioral;
