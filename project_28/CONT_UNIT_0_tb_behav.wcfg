@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="CONT_UNIT_0_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="CONT_UNIT_0_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="131910000fs"></ZoomStartTime>
+      <ZoomEndTime time="302510001fs"></ZoomEndTime>
+      <Cursor1Time time="1000000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="175"></NameColumnWidth>
+      <ValueColumnWidth column_width="74"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="10" />
+   <wvobject fp_name="/CONT_UNIT_0_tb/COP_i" type="array">
+      <obj_property name="ElementShortName">COP_i[2:0]</obj_property>
+      <obj_property name="ObjectShortName">COP_i[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CONT_UNIT_0_tb/CLK_i" type="logic">
+      <obj_property name="ElementShortName">CLK_i</obj_property>
+      <obj_property name="ObjectShortName">CLK_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CONT_UNIT_0_tb/RST_i" type="logic">
+      <obj_property name="ElementShortName">RST_i</obj_property>
+      <obj_property name="ObjectShortName">RST_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CONT_UNIT_0_tb/FZ_i" type="logic">
+      <obj_property name="ElementShortName">FZ_i</obj_property>
+      <obj_property name="ObjectShortName">FZ_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CONT_UNIT_0_tb/uut/CURRENT_STATE" type="other">
+      <obj_property name="ElementShortName">CURRENT_STATE</obj_property>
+      <obj_property name="ObjectShortName">CURRENT_STATE</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CONT_UNIT_0_tb/CW_o" type="array">
+      <obj_property name="ElementShortName">CW_o[9:0]</obj_property>
+      <obj_property name="ObjectShortName">CW_o[9:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CONT_UNIT_0_tb/stop_the_clock" type="other">
+      <obj_property name="ElementShortName">stop_the_clock</obj_property>
+      <obj_property name="ObjectShortName">stop_the_clock</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CONT_UNIT_0_tb/COP_WIDTH" type="other">
+      <obj_property name="ElementShortName">COP_WIDTH</obj_property>
+      <obj_property name="ObjectShortName">COP_WIDTH</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CONT_UNIT_0_tb/CW_WIDTH" type="other">
+      <obj_property name="ElementShortName">CW_WIDTH</obj_property>
+      <obj_property name="ObjectShortName">CW_WIDTH</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CONT_UNIT_0_tb/clock_period" type="other">
+      <obj_property name="ElementShortName">clock_period</obj_property>
+      <obj_property name="ObjectShortName">clock_period</obj_property>
+   </wvobject>
+</wave_config>

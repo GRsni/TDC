@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="DIDACOMP_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="DIDACOMP_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="209540000fs"></ZoomStartTime>
+      <ZoomEndTime time="302805439fs"></ZoomEndTime>
+      <Cursor1Time time="240669000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="175"></NameColumnWidth>
+      <ValueColumnWidth column_width="70"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="27" />
+   <wvobject fp_name="/DIDACOMP_tb/CLK_i" type="logic">
+      <obj_property name="ElementShortName">CLK_i</obj_property>
+      <obj_property name="ObjectShortName">CLK_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/DIDACOMP_tb/RST_i" type="logic">
+      <obj_property name="ElementShortName">RST_i</obj_property>
+      <obj_property name="ObjectShortName">RST_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/DIDACOMP_tb/ALU_RESULT_o" type="array">
+      <obj_property name="ElementShortName">ALU_RESULT_o[3:0]</obj_property>
+      <obj_property name="ObjectShortName">ALU_RESULT_o[3:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/DIDACOMP_tb/REG_A_o" type="array">
+      <obj_property name="ElementShortName">REG_A_o[3:0]</obj_property>
+      <obj_property name="ObjectShortName">REG_A_o[3:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/DIDACOMP_tb/REG_B_o" type="array">
+      <obj_property name="ElementShortName">REG_B_o[3:0]</obj_property>
+      <obj_property name="ObjectShortName">REG_B_o[3:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/DIDACOMP_tb/FZ_o" type="logic">
+      <obj_property name="ElementShortName">FZ_o</obj_property>
+      <obj_property name="ObjectShortName">FZ_o</obj_property>
+   </wvobject>
+   <wvobject fp_name="/DIDACOMP_tb/uut/CONTROL_UNIT/CW_o" type="array">
+      <obj_property name="ElementShortName">CW_o[9:0]</obj_property>
+      <obj_property name="ObjectShortName">CW_o[9:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+      <obj_property name="CustomSignalColor">#00FF00</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/DIDACOMP_tb/uut/CONTROL_UNIT/CURRENT_STATE" type="other">
+      <obj_property name="ElementShortName">CURRENT_STATE</obj_property>
+      <obj_property name="ObjectShortName">CURRENT_STATE</obj_property>
+   </wvobject>
+   <wvobject fp_name="/DIDACOMP_tb/DATA_BUS_o" type="array">
+      <obj_property name="ElementShortName">DATA_BUS_o[3:0]</obj_property>
+      <obj_property name="ObjectShortName">DATA_BUS_o[3:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/DIDACOMP_tb/INST_o" type="array">
+      <obj_property name="ElementShortName">INST_o[10:0]</obj_property>
+      <obj_property name="ObjectShortName">INST_o[10:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+      <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/DIDACOMP_tb/ADDR_RAM_o" type="array">
+      <obj_property name="ElementShortName">ADDR_RAM_o[3:0]</obj_property>
+      <obj_property name="ObjectShortName">ADDR_RAM_o[3:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/DIDACOMP_tb/ADDR1_o" type="array">
+      <obj_property name="ElementShortName">ADDR1_o[3:0]</obj_property>
+      <obj_property name="ObjectShortName">ADDR1_o[3:0]</obj_property>
+      <obj_property name="CustomSignalColor">#00FF00</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/DIDACOMP_tb/ADDR2_o" type="array">
+      <obj_property name="ElementShortName">ADDR2_o[3:0]</obj_property>
+      <obj_property name="ObjectShortName">ADDR2_o[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/DIDACOMP_tb/uut/DATA_PATH/ADDR_ROM" type="array">
+      <obj_property name="ElementShortName">ADDR_ROM[3:0]</obj_property>
+      <obj_property name="ObjectShortName">ADDR_ROM[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/DIDACOMP_tb/PC_o" type="array">
+      <obj_property name="ElementShortName">PC_o[3:0]</obj_property>
+      <obj_property name="ObjectShortName">PC_o[3:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/DIDACOMP_tb/uut/DATA_PATH/reg_PC" type="array">
+      <obj_property name="ElementShortName">reg_PC[3:0]</obj_property>
+      <obj_property name="ObjectShortName">reg_PC[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/DIDACOMP_tb/uut/DATA_PATH/RAM" type="array">
+      <obj_property name="ElementShortName">RAM[15:0][3:0]</obj_property>
+      <obj_property name="ObjectShortName">RAM[15:0][3:0]</obj_property>
+      <obj_property name="CustomSignalColor">#A0A0A4</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/DIDACOMP_tb/uut/DATA_PATH/ROM" type="array">
+      <obj_property name="ElementShortName">ROM[15:0][10:0]</obj_property>
+      <obj_property name="ObjectShortName">ROM[15:0][10:0]</obj_property>
+      <obj_property name="CustomSignalColor">#A0A0A4</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/DIDACOMP_tb/stop_the_clock" type="other">
+      <obj_property name="ElementShortName">stop_the_clock</obj_property>
+      <obj_property name="ObjectShortName">stop_the_clock</obj_property>
+   </wvobject>
+   <wvobject fp_name="/DIDACOMP_tb/DATA_RAM_WIDTH" type="other">
+      <obj_property name="ElementShortName">DATA_RAM_WIDTH</obj_property>
+      <obj_property name="ObjectShortName">DATA_RAM_WIDTH</obj_property>
+   </wvobject>
+   <wvobject fp_name="/DIDACOMP_tb/CW_WIDTH" type="other">
+      <obj_property name="ElementShortName">CW_WIDTH</obj_property>
+      <obj_property name="ObjectShortName">CW_WIDTH</obj_property>
+   </wvobject>
+   <wvobject fp_name="/DIDACOMP_tb/N_ALU" type="other">
+      <obj_property name="ElementShortName">N_ALU</obj_property>
+      <obj_property name="ObjectShortName">N_ALU</obj_property>
+   </wvobject>
+   <wvobject fp_name="/DIDACOMP_tb/ADDR_RAM_WIDTH" type="other">
+      <obj_property name="ElementShortName">ADDR_RAM_WIDTH</obj_property>
+      <obj_property name="ObjectShortName">ADDR_RAM_WIDTH</obj_property>
+   </wvobject>
+   <wvobject fp_name="/DIDACOMP_tb/DATA_ROM_WIDTH" type="other">
+      <obj_property name="ElementShortName">DATA_ROM_WIDTH</obj_property>
+      <obj_property name="ObjectShortName">DATA_ROM_WIDTH</obj_property>
+   </wvobject>
+   <wvobject fp_name="/DIDACOMP_tb/ADDR_ROM_WIDTH" type="other">
+      <obj_property name="ElementShortName">ADDR_ROM_WIDTH</obj_property>
+      <obj_property name="ObjectShortName">ADDR_ROM_WIDTH</obj_property>
+   </wvobject>
+   <wvobject fp_name="/DIDACOMP_tb/COP_WIDTH" type="other">
+      <obj_property name="ElementShortName">COP_WIDTH</obj_property>
+      <obj_property name="ObjectShortName">COP_WIDTH</obj_property>
+   </wvobject>
+   <wvobject fp_name="/DIDACOMP_tb/clock_period" type="other">
+      <obj_property name="ElementShortName">clock_period</obj_property>
+      <obj_property name="ObjectShortName">clock_period</obj_property>
+   </wvobject>
+</wave_config>
