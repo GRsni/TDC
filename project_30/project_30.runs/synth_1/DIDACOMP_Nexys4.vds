@@ -1,0 +1,516 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Wed May 19 11:56:43 2021
+# Process ID: 16768
+# Current directory: C:/Users/TDC/Desktop/TDC/project_30/project_30.runs/synth_1
+# Command line: vivado.exe -log DIDACOMP_Nexys4.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source DIDACOMP_Nexys4.tcl
+# Log file: C:/Users/TDC/Desktop/TDC/project_30/project_30.runs/synth_1/DIDACOMP_Nexys4.vds
+# Journal file: C:/Users/TDC/Desktop/TDC/project_30/project_30.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source DIDACOMP_Nexys4.tcl -notrace
+Command: synth_design -top DIDACOMP_Nexys4 -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 15192 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 342.688 ; gain = 100.504
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'DIDACOMP_Nexys4' [C:/Users/TDC/Desktop/TDC/project_30/project_30.srcs/sources_1/new/DIDACOMP_Nexys4.vhd:53]
+	Parameter DATA_RAM_WIDTH bound to: 4 - type: integer 
+	Parameter CW_WIDTH bound to: 10 - type: integer 
+	Parameter N_ALU bound to: 2 - type: integer 
+	Parameter ADDR_RAM_WIDTH bound to: 4 - type: integer 
+	Parameter DATA_ROM_WIDTH bound to: 11 - type: integer 
+	Parameter ADDR_ROM_WIDTH bound to: 4 - type: integer 
+	Parameter COP_WIDTH bound to: 3 - type: integer 
+	Parameter DEBOUNCE_TIMER bound to: 30000000 - type: integer 
+	Parameter TIMER bound to: 30000000 - type: integer 
+INFO: [Synth 8-3491] module 'EdgeDetector_Debounce' declared at 'C:/Users/TDC/Desktop/TDC/project_30/project_30.srcs/sources_1/imports/TDC/project_27/project_27.srcs/sources_1/new/EdgeDetector_Debounce.vhd:34' bound to instance 'DEBOUNCE' of component 'EdgeDetector_Debounce' [C:/Users/TDC/Desktop/TDC/project_30/project_30.srcs/sources_1/new/DIDACOMP_Nexys4.vhd:115]
+INFO: [Synth 8-638] synthesizing module 'EdgeDetector_Debounce' [C:/Users/TDC/Desktop/TDC/project_30/project_30.srcs/sources_1/imports/TDC/project_27/project_27.srcs/sources_1/new/EdgeDetector_Debounce.vhd:42]
+	Parameter TIMER bound to: 30000000 - type: integer 
+INFO: [Synth 8-226] default block is never used [C:/Users/TDC/Desktop/TDC/project_30/project_30.srcs/sources_1/imports/TDC/project_27/project_27.srcs/sources_1/new/EdgeDetector_Debounce.vhd:65]
+INFO: [Synth 8-226] default block is never used [C:/Users/TDC/Desktop/TDC/project_30/project_30.srcs/sources_1/imports/TDC/project_27/project_27.srcs/sources_1/new/EdgeDetector_Debounce.vhd:85]
+INFO: [Synth 8-256] done synthesizing module 'EdgeDetector_Debounce' (1#1) [C:/Users/TDC/Desktop/TDC/project_30/project_30.srcs/sources_1/imports/TDC/project_27/project_27.srcs/sources_1/new/EdgeDetector_Debounce.vhd:42]
+	Parameter DATA_RAM_WIDTH bound to: 4 - type: integer 
+	Parameter CW_WIDTH bound to: 10 - type: integer 
+	Parameter N_ALU bound to: 2 - type: integer 
+	Parameter ADDR_RAM_WIDTH bound to: 4 - type: integer 
+	Parameter DATA_ROM_WIDTH bound to: 11 - type: integer 
+	Parameter ADDR_ROM_WIDTH bound to: 4 - type: integer 
+	Parameter COP_WIDTH bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'DIDACOMP' declared at 'C:/Users/TDC/Desktop/TDC/project_30/project_30.srcs/sources_1/imports/new/DIDACOMP.vhd:34' bound to instance 'DIDACOMP_DEBOUNCED' of component 'DIDACOMP' [C:/Users/TDC/Desktop/TDC/project_30/project_30.srcs/sources_1/new/DIDACOMP_Nexys4.vhd:122]
+INFO: [Synth 8-638] synthesizing module 'DIDACOMP' [C:/Users/TDC/Desktop/TDC/project_30/project_30.srcs/sources_1/imports/new/DIDACOMP.vhd:57]
+	Parameter DATA_RAM_WIDTH bound to: 4 - type: integer 
+	Parameter CW_WIDTH bound to: 10 - type: integer 
+	Parameter N_ALU bound to: 2 - type: integer 
+	Parameter ADDR_RAM_WIDTH bound to: 4 - type: integer 
+	Parameter DATA_ROM_WIDTH bound to: 11 - type: integer 
+	Parameter ADDR_ROM_WIDTH bound to: 4 - type: integer 
+	Parameter COP_WIDTH bound to: 3 - type: integer 
+	Parameter CW_WIDTH bound to: 10 - type: integer 
+	Parameter COP_WIDTH bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'CONT_UNIT_0' declared at 'C:/Users/TDC/Desktop/TDC/project_30/project_30.srcs/sources_1/imports/TDC/project_28/project_28.srcs/sources_1/new/CONT_UNIT_0.vhd:34' bound to instance 'CONTROL_UNIT' of component 'CONT_UNIT_0' [C:/Users/TDC/Desktop/TDC/project_30/project_30.srcs/sources_1/imports/new/DIDACOMP.vhd:107]
+INFO: [Synth 8-638] synthesizing module 'CONT_UNIT_0' [C:/Users/TDC/Desktop/TDC/project_30/project_30.srcs/sources_1/imports/TDC/project_28/project_28.srcs/sources_1/new/CONT_UNIT_0.vhd:45]
+	Parameter CW_WIDTH bound to: 10 - type: integer 
+	Parameter COP_WIDTH bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'CONT_UNIT_0' (2#1) [C:/Users/TDC/Desktop/TDC/project_30/project_30.srcs/sources_1/imports/TDC/project_28/project_28.srcs/sources_1/new/CONT_UNIT_0.vhd:45]
+INFO: [Synth 8-3491] module 'EDGE_DETECTOR_00' declared at 'C:/Users/TDC/Desktop/TDC/project_30/project_30.srcs/sources_1/imports/TDC/project_15/project_15.srcs/sources_1/new/EDGE_DETECTOR_00.vhd:34' bound to instance 'CW4' of component 'EDGE_DETECTOR_00' [C:/Users/TDC/Desktop/TDC/project_30/project_30.srcs/sources_1/imports/new/DIDACOMP.vhd:118]
+INFO: [Synth 8-638] synthesizing module 'EDGE_DETECTOR_00' [C:/Users/TDC/Desktop/TDC/project_30/project_30.srcs/sources_1/imports/TDC/project_15/project_15.srcs/sources_1/new/EDGE_DETECTOR_00.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'EDGE_DETECTOR_00' (3#1) [C:/Users/TDC/Desktop/TDC/project_30/project_30.srcs/sources_1/imports/TDC/project_15/project_15.srcs/sources_1/new/EDGE_DETECTOR_00.vhd:41]
+INFO: [Synth 8-3491] module 'EDGE_DETECTOR_00' declared at 'C:/Users/TDC/Desktop/TDC/project_30/project_30.srcs/sources_1/imports/TDC/project_15/project_15.srcs/sources_1/new/EDGE_DETECTOR_00.vhd:34' bound to instance 'CW6' of component 'EDGE_DETECTOR_00' [C:/Users/TDC/Desktop/TDC/project_30/project_30.srcs/sources_1/imports/new/DIDACOMP.vhd:124]
+	Parameter DATA_RAM_WIDTH bound to: 4 - type: integer 
+	Parameter CW_WIDTH bound to: 10 - type: integer 
+	Parameter N_ALU bound to: 2 - type: integer 
+	Parameter ADDR_RAM_WIDTH bound to: 4 - type: integer 
+	Parameter DATA_ROM_WIDTH bound to: 11 - type: integer 
+	Parameter ADDR_ROM_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'DATA_PATH_0' declared at 'C:/Users/TDC/Desktop/TDC/project_30/project_30.srcs/sources_1/imports/TDC/project_26/project_26.srcs/sources_1/new/DATA_PATH_0.vhd:34' bound to instance 'DATA_PATH' of component 'DATA_PATH_0' [C:/Users/TDC/Desktop/TDC/project_30/project_30.srcs/sources_1/imports/new/DIDACOMP.vhd:130]
+INFO: [Synth 8-638] synthesizing module 'DATA_PATH_0' [C:/Users/TDC/Desktop/TDC/project_30/project_30.srcs/sources_1/imports/TDC/project_26/project_26.srcs/sources_1/new/DATA_PATH_0.vhd:56]
+	Parameter DATA_RAM_WIDTH bound to: 4 - type: integer 
+	Parameter CW_WIDTH bound to: 10 - type: integer 
+	Parameter N_ALU bound to: 2 - type: integer 
+	Parameter ADDR_RAM_WIDTH bound to: 4 - type: integer 
+	Parameter DATA_ROM_WIDTH bound to: 11 - type: integer 
+	Parameter ADDR_ROM_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-226] default block is never used [C:/Users/TDC/Desktop/TDC/project_30/project_30.srcs/sources_1/imports/TDC/project_26/project_26.srcs/sources_1/new/DATA_PATH_0.vhd:170]
+INFO: [Synth 8-256] done synthesizing module 'DATA_PATH_0' (4#1) [C:/Users/TDC/Desktop/TDC/project_30/project_30.srcs/sources_1/imports/TDC/project_26/project_26.srcs/sources_1/new/DATA_PATH_0.vhd:56]
+INFO: [Synth 8-256] done synthesizing module 'DIDACOMP' (5#1) [C:/Users/TDC/Desktop/TDC/project_30/project_30.srcs/sources_1/imports/new/DIDACOMP.vhd:57]
+	Parameter DATA_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'DISP8ON' declared at 'C:/Users/TDC/Desktop/TDC/project_30/project_30.srcs/sources_1/imports/new/DISP8ON.vhd:34' bound to instance 'DISP' of component 'DISP8ON' [C:/Users/TDC/Desktop/TDC/project_30/project_30.srcs/sources_1/new/DIDACOMP_Nexys4.vhd:144]
+INFO: [Synth 8-638] synthesizing module 'DISP8ON' [C:/Users/TDC/Desktop/TDC/project_30/project_30.srcs/sources_1/imports/new/DISP8ON.vhd:51]
+	Parameter DATA_WIDTH bound to: 4 - type: integer 
+	Parameter FREQ bound to: 100000 - type: integer 
+INFO: [Synth 8-3491] module 'PRESCALER_1Hz' declared at 'C:/Users/TDC/Desktop/TDC/project_30/project_30.srcs/sources_1/imports/TDC/project_20/project_20.srcs/sources_1/new/PRESCALER_1Hz.vhd:34' bound to instance 'PRESCALER_1kHz' of component 'PRESCALER_1Hz' [C:/Users/TDC/Desktop/TDC/project_30/project_30.srcs/sources_1/imports/new/DISP8ON.vhd:95]
+INFO: [Synth 8-638] synthesizing module 'PRESCALER_1Hz' [C:/Users/TDC/Desktop/TDC/project_30/project_30.srcs/sources_1/imports/TDC/project_20/project_20.srcs/sources_1/new/PRESCALER_1Hz.vhd:41]
+	Parameter FREQ bound to: 100000 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'PRESCALER_1Hz' (6#1) [C:/Users/TDC/Desktop/TDC/project_30/project_30.srcs/sources_1/imports/TDC/project_20/project_20.srcs/sources_1/new/PRESCALER_1Hz.vhd:41]
+	Parameter N bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'COUNTER_N_bits' declared at 'C:/Users/TDC/Desktop/TDC/project_30/project_30.srcs/sources_1/imports/TDC/project_17/project_17.srcs/sources_1/new/COUNTER_N_bits.vhd:34' bound to instance 'COUNTER' of component 'COUNTER_N_bits' [C:/Users/TDC/Desktop/TDC/project_30/project_30.srcs/sources_1/imports/new/DISP8ON.vhd:103]
+INFO: [Synth 8-638] synthesizing module 'COUNTER_N_bits' [C:/Users/TDC/Desktop/TDC/project_30/project_30.srcs/sources_1/imports/TDC/project_17/project_17.srcs/sources_1/new/COUNTER_N_bits.vhd:42]
+	Parameter N bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'COUNTER_N_bits' (7#1) [C:/Users/TDC/Desktop/TDC/project_30/project_30.srcs/sources_1/imports/TDC/project_17/project_17.srcs/sources_1/new/COUNTER_N_bits.vhd:42]
+	Parameter WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'MUX4' declared at 'C:/Users/TDC/Desktop/TDC/project_30/project_30.srcs/sources_1/imports/TDC/project_07/project_07.srcs/sources_1/new/MUX4.vhd:34' bound to instance 'MUX8' of component 'MUX4' [C:/Users/TDC/Desktop/TDC/project_30/project_30.srcs/sources_1/imports/new/DISP8ON.vhd:112]
+INFO: [Synth 8-638] synthesizing module 'MUX4' [C:/Users/TDC/Desktop/TDC/project_30/project_30.srcs/sources_1/imports/TDC/project_07/project_07.srcs/sources_1/new/MUX4.vhd:48]
+	Parameter WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'MUX4' (8#1) [C:/Users/TDC/Desktop/TDC/project_30/project_30.srcs/sources_1/imports/TDC/project_07/project_07.srcs/sources_1/new/MUX4.vhd:48]
+INFO: [Synth 8-3491] module 'DISP7SEG' declared at 'C:/Users/TDC/Desktop/TDC/project_30/project_30.srcs/sources_1/imports/TDC/project_08/project_08.srcs/sources_1/new/DISP7SEG.vhd:34' bound to instance 'DISP7' of component 'DISP7SEG' [C:/Users/TDC/Desktop/TDC/project_30/project_30.srcs/sources_1/imports/new/DISP8ON.vhd:126]
+INFO: [Synth 8-638] synthesizing module 'DISP7SEG' [C:/Users/TDC/Desktop/TDC/project_30/project_30.srcs/sources_1/imports/TDC/project_08/project_08.srcs/sources_1/new/DISP7SEG.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'DISP7SEG' (9#1) [C:/Users/TDC/Desktop/TDC/project_30/project_30.srcs/sources_1/imports/TDC/project_08/project_08.srcs/sources_1/new/DISP7SEG.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'DISP8ON' (10#1) [C:/Users/TDC/Desktop/TDC/project_30/project_30.srcs/sources_1/imports/new/DISP8ON.vhd:51]
+INFO: [Synth 8-256] done synthesizing module 'DIDACOMP_Nexys4' (11#1) [C:/Users/TDC/Desktop/TDC/project_30/project_30.srcs/sources_1/new/DIDACOMP_Nexys4.vhd:53]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 397.762 ; gain = 155.578
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 397.762 ; gain = 155.578
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 397.762 ; gain = 155.578
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/TDC/Desktop/TDC/project_30/project_30.srcs/constrs_1/imports/project_30/Nexys-4-DDR-Master.xdc]
+Finished Parsing XDC File [C:/Users/TDC/Desktop/TDC/project_30/project_30.srcs/constrs_1/imports/project_30/Nexys-4-DDR-Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/TDC/Desktop/TDC/project_30/project_30.srcs/constrs_1/imports/project_30/Nexys-4-DDR-Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/DIDACOMP_Nexys4_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/DIDACOMP_Nexys4_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 749.367 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 749.367 ; gain = 507.184
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 749.367 ; gain = 507.184
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 749.367 ; gain = 507.184
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'State_reg' in module 'EdgeDetector_Debounce'
+INFO: [Synth 8-5544] ROM "Timer_count" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "PULSE_o" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "State" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'CURRENT_STATE_reg' in module 'CONT_UNIT_0'
+INFO: [Synth 8-5544] ROM "CW_o" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "CURRENT_STATE" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "CURRENT_STATE" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "CURRENT_STATE" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/TDC/Desktop/TDC/project_30/project_30.srcs/sources_1/imports/TDC/project_26/project_26.srcs/sources_1/new/DATA_PATH_0.vhd:120]
+INFO: [Synth 8-5544] ROM "FZ" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ROM" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "clk_o" won't be mapped to RAM because it is too sparse
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    inic |                               00 |                               00
+                      s0 |                               01 |                               01
+                     s01 |                               10 |                               10
+                  s_wait |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'State_reg' using encoding 'sequential' in module 'EdgeDetector_Debounce'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                     000000000001 |                             0000
+                   fetch |                     000000000010 |                             0001
+                  decode |                     000000000100 |                             0010
+                   ope_a |                     000000001000 |                             0101
+                   mov_a |                     000000010000 |                             1000
+                   inc_a |                     000000100000 |                             1001
+                  addr_b |                     000001000000 |                             0110
+                   ope_b |                     000010000000 |                             0111
+                 a_add_b |                     000100000000 |                             1010
+                 a_sub_b |                     001000000000 |                             1011
+                  branch |                     010000000000 |                             0011
+                 br_inst |                     100000000000 |                             0100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'CURRENT_STATE_reg' using encoding 'one-hot' in module 'CONT_UNIT_0'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 749.367 ; gain = 507.184
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     17 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
+	   3 Input      4 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	               17 Bit    Registers := 1     
+	               11 Bit    Registers := 2     
+	                4 Bit    Registers := 4     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 7     
++---RAMs : 
+	               64 Bit         RAMs := 1     
++---Muxes : 
+	   2 Input     17 Bit        Muxes := 1     
+	   9 Input     12 Bit        Muxes := 1     
+	   3 Input     12 Bit        Muxes := 2     
+	   2 Input     12 Bit        Muxes := 1     
+	   4 Input     12 Bit        Muxes := 1     
+	  17 Input     11 Bit        Muxes := 1     
+	  12 Input     10 Bit        Muxes := 1     
+	   8 Input      8 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 4     
+	   4 Input      4 Bit        Muxes := 3     
+	   4 Input      2 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module EdgeDetector_Debounce 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   4 Input      2 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 3     
+Module CONT_UNIT_0 
+Detailed RTL Component Info : 
++---Muxes : 
+	   9 Input     12 Bit        Muxes := 1     
+	   3 Input     12 Bit        Muxes := 2     
+	   2 Input     12 Bit        Muxes := 1     
+	   4 Input     12 Bit        Muxes := 1     
+	  12 Input     10 Bit        Muxes := 1     
+Module EDGE_DETECTOR_00 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module DATA_PATH_0 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
+	   3 Input      4 Bit       Adders := 1     
++---Registers : 
+	               11 Bit    Registers := 2     
+	                4 Bit    Registers := 4     
+	                1 Bit    Registers := 1     
++---RAMs : 
+	               64 Bit         RAMs := 1     
++---Muxes : 
+	  17 Input     11 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 4     
+	   4 Input      4 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 1     
+Module PRESCALER_1Hz 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     17 Bit       Adders := 1     
++---Registers : 
+	               17 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     17 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module COUNTER_N_bits 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                3 Bit    Registers := 1     
+Module DISP7SEG 
+Detailed RTL Component Info : 
++---Muxes : 
+	   8 Input      8 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5544] ROM "DIDACOMP_DEBOUNCED/CONTROL_UNIT/CURRENT_STATE" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "DIDACOMP_DEBOUNCED/CONTROL_UNIT/CURRENT_STATE" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "DISP/PRESCALER_1kHz/clk_o" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-3886] merging instance 'DIDACOMP_DEBOUNCED/CW6/REG_PUSH_reg' (FDC) to 'DIDACOMP_DEBOUNCED/CW4/REG_PUSH_reg'
+INFO: [Synth 8-3886] merging instance 'DIDACOMP_DEBOUNCED/CW6/PREV_PUSH_reg' (FDC) to 'DIDACOMP_DEBOUNCED/CW4/PREV_PUSH_reg'
+INFO: [Synth 8-3886] merging instance 'DIDACOMP_DEBOUNCED/DATA_PATH/DATA_ROM_reg[5]' (FD) to 'DIDACOMP_DEBOUNCED/DATA_PATH/DATA_ROM_reg[10]'
+INFO: [Synth 8-3886] merging instance 'DIDACOMP_DEBOUNCED/DATA_PATH/reg_INST_reg[5]' (FDCE) to 'DIDACOMP_DEBOUNCED/DATA_PATH/reg_INST_reg[10]'
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 749.367 ; gain = 507.184
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Preliminary Mapping  Report (see note below)
++----------------+--------------------------------------+-----------+----------------------+----------------+
+|Module Name     | RTL Object                           | Inference | Size (Depth x Width) | Primitives     | 
++----------------+--------------------------------------+-----------+----------------------+----------------+
+|DIDACOMP_Nexys4 | DIDACOMP_DEBOUNCED/DATA_PATH/RAM_reg | Implied   | 16 x 4               | RAM16X1S x 4   | 
++----------------+--------------------------------------+-----------+----------------------+----------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 749.367 ; gain = 507.184
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 762.172 ; gain = 519.988
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Final Mapping  Report
++----------------+--------------------------------------+-----------+----------------------+----------------+
+|Module Name     | RTL Object                           | Inference | Size (Depth x Width) | Primitives     | 
++----------------+--------------------------------------+-----------+----------------------+----------------+
+|DIDACOMP_Nexys4 | DIDACOMP_DEBOUNCED/DATA_PATH/RAM_reg | Implied   | 16 x 4               | RAM16X1S x 4   | 
++----------------+--------------------------------------+-----------+----------------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 762.172 ; gain = 519.988
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:26 ; elapsed = 00:00:30 . Memory (MB): peak = 762.172 ; gain = 519.988
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:26 ; elapsed = 00:00:30 . Memory (MB): peak = 762.172 ; gain = 519.988
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:26 ; elapsed = 00:00:30 . Memory (MB): peak = 762.172 ; gain = 519.988
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:26 ; elapsed = 00:00:30 . Memory (MB): peak = 762.172 ; gain = 519.988
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:26 ; elapsed = 00:00:30 . Memory (MB): peak = 762.172 ; gain = 519.988
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:26 ; elapsed = 00:00:30 . Memory (MB): peak = 762.172 ; gain = 519.988
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |BUFG     |     1|
+|2     |CARRY4   |    14|
+|3     |LUT1     |     4|
+|4     |LUT2     |    44|
+|5     |LUT3     |    24|
+|6     |LUT4     |    19|
+|7     |LUT5     |    19|
+|8     |LUT6     |    47|
+|9     |RAM16X1S |     4|
+|10    |FDCE     |    60|
+|11    |FDPE     |     1|
+|12    |FDRE     |    39|
+|13    |IBUF     |     3|
+|14    |OBUF     |    27|
++------+---------+------+
+
+Report Instance Areas: 
++------+---------------------+----------------------+------+
+|      |Instance             |Module                |Cells |
++------+---------------------+----------------------+------+
+|1     |top                  |                      |   306|
+|2     |  DEBOUNCE           |EdgeDetector_Debounce |    83|
+|3     |  DIDACOMP_DEBOUNCED |DIDACOMP              |   130|
+|4     |    CONTROL_UNIT     |CONT_UNIT_0           |    39|
+|5     |    CW4              |EDGE_DETECTOR_00      |     3|
+|6     |    DATA_PATH        |DATA_PATH_0           |    88|
+|7     |  DISP               |DISP8ON               |    62|
+|8     |    COUNTER          |COUNTER_N_bits        |    16|
+|9     |    PRESCALER_1kHz   |PRESCALER_1Hz         |    46|
++------+---------------------+----------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:26 ; elapsed = 00:00:30 . Memory (MB): peak = 762.172 ; gain = 519.988
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:21 . Memory (MB): peak = 762.172 ; gain = 168.383
+Synthesis Optimization Complete : Time (s): cpu = 00:00:26 ; elapsed = 00:00:30 . Memory (MB): peak = 762.172 ; gain = 519.988
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 21 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 4 instances were transformed.
+  RAM16X1S => RAM32X1S (RAMS32): 4 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+70 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 772.301 ; gain = 543.270
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/TDC/Desktop/TDC/project_30/project_30.runs/synth_1/DIDACOMP_Nexys4.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file DIDACOMP_Nexys4_utilization_synth.rpt -pb DIDACOMP_Nexys4_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.037 . Memory (MB): peak = 772.301 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Wed May 19 11:57:19 2021...

@@ -10,13 +10,13 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="209540000fs"></ZoomStartTime>
-      <ZoomEndTime time="302805439fs"></ZoomEndTime>
-      <Cursor1Time time="240669000fs"></Cursor1Time>
+      <ZoomStartTime time="240870000fs"></ZoomStartTime>
+      <ZoomEndTime time="376570001fs"></ZoomEndTime>
+      <Cursor1Time time="84531000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="175"></NameColumnWidth>
-      <ValueColumnWidth column_width="70"></ValueColumnWidth>
+      <ValueColumnWidth column_width="66"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="27" />
    <wvobject fp_name="/DIDACOMP_tb/CLK_i" type="logic">
@@ -108,7 +108,6 @@
       <obj_property name="ObjectShortName">RAM[15:0][3:0]</obj_property>
       <obj_property name="CustomSignalColor">#A0A0A4</obj_property>
       <obj_property name="UseCustomSignalColor">true</obj_property>
-      <obj_property name="Radix">BINARYRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/DIDACOMP_tb/uut/DATA_PATH/ROM" type="array">
       <obj_property name="ElementShortName">ROM[15:0][10:0]</obj_property>
