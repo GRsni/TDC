@@ -1,0 +1,9 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../project_29.srcs/sources_1/imports/TDC/project_28/project_28.srcs/sources_1/new/CONT_UNIT_0.vhd" \
+"../../../../project_29.srcs/sources_1/imports/TDC/project_26/project_26.srcs/sources_1/new/DATA_PATH_0.vhd" \
+"../../../../project_29.srcs/sources_1/new/DIDACOMP.vhd" \
+"../../../../project_29.srcs/sim_1/new/DIDACOMP_TB.vhd" \
+
+# Do not sort compile order
+nosort

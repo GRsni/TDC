@@ -94,7 +94,7 @@ begin
                 when BRANCH =>
                     CURRENT_STATE <= BR_INST;
                 when BR_INST =>
-                    CURRENT_STATE <= FETCH;
+                    CURRENT_STATE <= DECODE;
                 when OPE_A =>
                     case COP_i is
                         when "000" =>
