@@ -17,7 +17,7 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param synth.incrementalSynthesisCache C:/Users/TDC/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-11244-ALESI1009/incrSyn
+set_param synth.incrementalSynthesisCache {C:/Users/Santiago Mas/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-15868-DESKTOP-3QO6TRU/incrSyn}
 set_msg_config -id {Synth 8-256} -limit 10000
 set_msg_config -id {Synth 8-638} -limit 10000
 create_project -in_memory -part xc7a100tcsg324-1
@@ -25,24 +25,24 @@ create_project -in_memory -part xc7a100tcsg324-1
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir C:/Users/TDC/Desktop/TDC/project_30/project_30.cache/wt [current_project]
-set_property parent.project_path C:/Users/TDC/Desktop/TDC/project_30/project_30.xpr [current_project]
+set_property webtalk.parent_dir C:/GII/TDC/project_30/project_30.cache/wt [current_project]
+set_property parent.project_path C:/GII/TDC/project_30/project_30.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo c:/Users/TDC/Desktop/TDC/project_30/project_30.cache/ip [current_project]
+set_property ip_output_repo c:/GII/TDC/project_30/project_30.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_vhdl -library xil_defaultlib {
-  C:/Users/TDC/Desktop/TDC/project_30/project_30.srcs/sources_1/imports/TDC/project_28/project_28.srcs/sources_1/new/CONT_UNIT_0.vhd
-  C:/Users/TDC/Desktop/TDC/project_30/project_30.srcs/sources_1/imports/TDC/project_17/project_17.srcs/sources_1/new/COUNTER_N_bits.vhd
-  C:/Users/TDC/Desktop/TDC/project_30/project_30.srcs/sources_1/imports/TDC/project_26/project_26.srcs/sources_1/new/DATA_PATH_0.vhd
-  C:/Users/TDC/Desktop/TDC/project_30/project_30.srcs/sources_1/imports/new/DIDACOMP.vhd
-  C:/Users/TDC/Desktop/TDC/project_30/project_30.srcs/sources_1/imports/TDC/project_08/project_08.srcs/sources_1/new/DISP7SEG.vhd
-  C:/Users/TDC/Desktop/TDC/project_30/project_30.srcs/sources_1/imports/new/DISP8ON.vhd
-  C:/Users/TDC/Desktop/TDC/project_30/project_30.srcs/sources_1/imports/TDC/project_15/project_15.srcs/sources_1/new/EDGE_DETECTOR_00.vhd
-  C:/Users/TDC/Desktop/TDC/project_30/project_30.srcs/sources_1/imports/TDC/project_27/project_27.srcs/sources_1/new/EdgeDetector_Debounce.vhd
-  C:/Users/TDC/Desktop/TDC/project_30/project_30.srcs/sources_1/imports/TDC/project_07/project_07.srcs/sources_1/new/MUX4.vhd
-  C:/Users/TDC/Desktop/TDC/project_30/project_30.srcs/sources_1/imports/TDC/project_20/project_20.srcs/sources_1/new/PRESCALER_1Hz.vhd
-  C:/Users/TDC/Desktop/TDC/project_30/project_30.srcs/sources_1/new/DIDACOMP_Nexys4.vhd
+  C:/GII/TDC/project_30/project_30.srcs/sources_1/imports/TDC/project_28/project_28.srcs/sources_1/new/CONT_UNIT_0.vhd
+  C:/GII/TDC/project_30/project_30.srcs/sources_1/imports/TDC/project_17/project_17.srcs/sources_1/new/COUNTER_N_bits.vhd
+  C:/GII/TDC/project_30/project_30.srcs/sources_1/imports/TDC/project_26/project_26.srcs/sources_1/new/DATA_PATH_0.vhd
+  C:/GII/TDC/project_30/project_30.srcs/sources_1/imports/new/DIDACOMP.vhd
+  C:/GII/TDC/project_30/project_30.srcs/sources_1/imports/TDC/project_08/project_08.srcs/sources_1/new/DISP7SEG.vhd
+  C:/GII/TDC/project_30/project_30.srcs/sources_1/imports/new/DISP8ON.vhd
+  C:/GII/TDC/project_30/project_30.srcs/sources_1/imports/TDC/project_15/project_15.srcs/sources_1/new/EDGE_DETECTOR_00.vhd
+  C:/GII/TDC/project_30/project_30.srcs/sources_1/imports/TDC/project_27/project_27.srcs/sources_1/new/EdgeDetector_Debounce.vhd
+  C:/GII/TDC/project_30/project_30.srcs/sources_1/imports/TDC/project_07/project_07.srcs/sources_1/new/MUX4.vhd
+  C:/GII/TDC/project_30/project_30.srcs/sources_1/imports/TDC/project_20/project_20.srcs/sources_1/new/PRESCALER_1Hz.vhd
+  C:/GII/TDC/project_30/project_30.srcs/sources_1/new/DIDACOMP_Nexys4.vhd
 }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -52,8 +52,8 @@ read_vhdl -library xil_defaultlib {
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc C:/Users/TDC/Desktop/TDC/project_30/project_30.srcs/constrs_1/imports/project_30/Nexys-4-DDR-Master.xdc
-set_property used_in_implementation false [get_files C:/Users/TDC/Desktop/TDC/project_30/project_30.srcs/constrs_1/imports/project_30/Nexys-4-DDR-Master.xdc]
+read_xdc C:/GII/TDC/project_30/project_30.srcs/constrs_1/imports/project_30/Nexys-4-DDR-Master.xdc
+set_property used_in_implementation false [get_files C:/GII/TDC/project_30/project_30.srcs/constrs_1/imports/project_30/Nexys-4-DDR-Master.xdc]
 
 set_param ips.enableIPCacheLiteLoad 0
 close [open __synthesis_is_running__ w]

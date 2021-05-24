@@ -67,16 +67,16 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param synth.incrementalSynthesisCache C:/Users/TDC/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-11244-ALESI1009/incrSyn
+  set_param synth.incrementalSynthesisCache {C:/Users/Santiago Mas/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-15868-DESKTOP-3QO6TRU/incrSyn}
   create_project -in_memory -part xc7a100tcsg324-1
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir C:/Users/TDC/Desktop/TDC/project_30/project_30.cache/wt [current_project]
-  set_property parent.project_path C:/Users/TDC/Desktop/TDC/project_30/project_30.xpr [current_project]
-  set_property ip_output_repo C:/Users/TDC/Desktop/TDC/project_30/project_30.cache/ip [current_project]
+  set_property webtalk.parent_dir C:/GII/TDC/project_30/project_30.cache/wt [current_project]
+  set_property parent.project_path C:/GII/TDC/project_30/project_30.xpr [current_project]
+  set_property ip_output_repo C:/GII/TDC/project_30/project_30.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
-  add_files -quiet C:/Users/TDC/Desktop/TDC/project_30/project_30.runs/synth_1/DIDACOMP_Nexys4.dcp
-  read_xdc C:/Users/TDC/Desktop/TDC/project_30/project_30.srcs/constrs_1/imports/project_30/Nexys-4-DDR-Master.xdc
+  add_files -quiet C:/GII/TDC/project_30/project_30.runs/synth_1/DIDACOMP_Nexys4.dcp
+  read_xdc C:/GII/TDC/project_30/project_30.srcs/constrs_1/imports/project_30/Nexys-4-DDR-Master.xdc
   link_design -top DIDACOMP_Nexys4 -part xc7a100tcsg324-1
   close_msg_db -file init_design.pb
 } RESULT]

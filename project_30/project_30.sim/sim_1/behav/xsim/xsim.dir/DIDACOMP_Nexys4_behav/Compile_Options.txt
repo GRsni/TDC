@@ -1,0 +1,1 @@
+-wto "82ea2da5d78f4835b9b845d9b571841f" --incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "secureip" --snapshot "DIDACOMP_Nexys4_behav" "xil_defaultlib.DIDACOMP_Nexys4" -log "elaborate.log" 

@@ -2,11 +2,11 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Wed May 19 11:57:26 2021
-# Process ID: 1124
-# Current directory: C:/Users/TDC/Desktop/TDC/project_30/project_30.runs/impl_1
+# Start of session at: Fri May 21 22:43:29 2021
+# Process ID: 672
+# Current directory: C:/GII/TDC/project_30/project_30.runs/impl_1
 # Command line: vivado.exe -log DIDACOMP_Nexys4.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source DIDACOMP_Nexys4.tcl -notrace
-# Log file: C:/Users/TDC/Desktop/TDC/project_30/project_30.runs/impl_1/DIDACOMP_Nexys4.vdi
-# Journal file: C:/Users/TDC/Desktop/TDC/project_30/project_30.runs/impl_1\vivado.jou
+# Log file: C:/GII/TDC/project_30/project_30.runs/impl_1/DIDACOMP_Nexys4.vdi
+# Journal file: C:/GII/TDC/project_30/project_30.runs/impl_1\vivado.jou
 #-----------------------------------------------------------
 source DIDACOMP_Nexys4.tcl -notrace
