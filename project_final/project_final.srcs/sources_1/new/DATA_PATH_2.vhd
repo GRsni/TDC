@@ -34,7 +34,7 @@ entity DATA_PATH_2 is
     Generic (DATA_WIDTH: integer:=4;
             DATA_RAM_WIDTH: integer:=12;
             ADDR_RAM_WIDTH: integer:=4;
-            CW_WIDTH: integer:=20;
+            CW_WIDTH: integer:=21;
             N_ALU: integer:=3;
             NREG_WIDTH: integer:=3);
     Port (  RST_i : in STD_LOGIC;
@@ -57,18 +57,18 @@ architecture Behavioral of DATA_PATH_2 is
    type RAM_TYPE is array (2**ADDR_RAM_WIDTH-1 downto 0) of
                             STD_LOGIC_VECTOR(DATA_RAM_WIDTH-1 downto 0);
     signal RAM: RAM_TYPE:=
-                       (0=>  "000011111010", 
-                        1=>  "000011111010",
-                        2=>  "000011111010",
-                        3=>  "000011111010",
-                        4=>  "000011111010",
-                        5=>  "000011111010",
-                        6=>  "000011111010",
-                        7=>  "000011111010", 
-                        8=>  "000011111010",
-                        9=>  "000011111010",
-                        10=> "000011111010",
-                        11=> "000000001010",
+                       (0=>  "000010110111", 
+                        1=>  "000011010001",
+                        2=>  "001101110001",
+                        3=>  "010000100001",
+                        4=>  "010110000001",
+                        5=>  "000011110011",
+                        6=>  "001001110011",
+                        7=>  "011000001001", 
+                        8=>  "000111000001",
+                        9=>  "000111000011",
+                        10=> "011000000000",
+                        11=> "000000001111",
                         12=> "000000001111", 
                         13=> "000000001001", 
                         14=> "000000000000", 
@@ -77,20 +77,12 @@ architecture Behavioral of DATA_PATH_2 is
     type REG_BANK_TYPE is array(2 ** NREG_WIDTH-1 downto 0) of
                                 STD_LOGIC_VECTOR(DATA_WIDTH-1 downto 0);
                               
-    signal REG_BANK: REG_BANK_TYPE:=(0=> "0001", 
-                                    1=> "1111",
-                                    2=> "1110",
-                                    3=> "1110",
-                                    4=> "1110",
-                                    5=> "0000",
-                                    6=> "0001",
-                                    7=> "0010");
+    signal REG_BANK: REG_BANK_TYPE:=(others => "0000");
 
     signal ALU_DATA_BUS: STD_LOGIC_VECTOR(DATA_WIDTH-1 downto 0);       --dummy
     signal ALU_RES_BUS: STD_LOGIC_VECTOR(DATA_WIDTH downto 0);          --dummy
     signal RAM_DATA_BUS: STD_LOGIC_VECTOR(DATA_RAM_WIDTH-1 downto 0);   --dummy
-    signal RAM_ADDR_BUS: STD_LOGIC_VECTOR(DATA_WIDTH-1 downto 0);       --dummy
-    signal RAM_ADDR_IN: STD_LOGIC_VECTOR(ADDR_RAM_WIDTH-1 downto 0);    --dummy
+    signal RAM_ADDR_BUS: STD_LOGIC_VECTOR(ADDR_RAM_WIDTH-1 downto 0);       --dummy
     signal PC_OUT_BUS: STD_LOGIC_VECTOR(DATA_WIDTH-1 downto 0);     --dummy
     
     signal reg_A: unsigned(DATA_WIDTH downto 0);
@@ -123,21 +115,19 @@ begin
     WRITE_REG_BANK: process(CLK_i)
     begin
         if(rising_edge(CLK_i))then
-          if(CW_i(6) = '1') then
+          if(CW_i(6) = '1') then    --  Load value from ALU into register bank
                 REG_BANK(to_integer(unsigned(reg_ADDR_RB))) <= std_logic_vector(ALU_RES_BUS(DATA_WIDTH-1 downto 0));                
             end if;
         end if;
     end process;
     
+    
+    -- Load RAM ADDR BUS with first or second reg INST field
     with CW_i(15) select
         RAM_ADDR_BUS <= reg_INST(2*ADDR_RAM_WIDTH-1 downto ADDR_RAM_WIDTH)  when '0',  -- load ADDR1 from reg_INST
                          reg_INST(ADDR_RAM_WIDTH-1 downto 0) when others;               -- Load ADDR2 from reg_INST
     
-    
-    with CW_i(10) select
-        RAM_ADDR_IN <= RAM_ADDR_BUS when '0',
-                        PC_OUT_BUS when others;
-    
+    -- Load PC bus with either reg_PC or jump address if BEZ and FZ = 1
     PC_OUT_BUS <= reg_INST(ADDR_RAM_WIDTH-1 downto 0) when CW_i(16) = '1' and
                                                         reg_FZ = '1' else
                   std_logic_vector(reg_PC);
@@ -157,15 +147,15 @@ begin
             reg_PC <= (others => '0');
         elsif rising_edge(CLK_i) then
             -- load register depending on CW_i
-            if(CW_i(17) = '1') then
+            if(CW_i(17) = '1') then -- Update reg PC
                 reg_PC <= 1 + unsigned(PC_OUT_BUS);
             end if;
             
-            if(CW_i(14) = '1') then 
+            if(CW_i(14) = '1') then --Load reg INST with data from RAM
                 reg_INST <= RAM_DATA_BUS;
             end if;
             
-            if(CW_i(13) = '1') then
+            if(CW_i(13) = '1') then --Load reg DATA RAM with either data from RAM or from ALU RESULT
                 if(CW_i(12) = '1') then
                     reg_DATA_RAM <= RAM_DATA_BUS;
                 else
@@ -173,27 +163,31 @@ begin
                 end if;
             end if;
             
-            if(CW_i(11) = '1') then
-                reg_ADDR_RAM <= RAM_ADDR_IN;
+            if(CW_i(11) = '1') then -- Load reg ADDR RAM
+                if(CW_i(10) = '0') then     
+                    reg_ADDR_RAM <= RAM_ADDR_BUS;   -- Load RAM address register from address bus
+                else
+                    reg_ADDR_RAM <= PC_OUT_BUS;     -- Load RAM address register with PC pointer
+                end if;
             end if;
             
-            if(CW_i(8) = '1') then
+            if(CW_i(8) = '1') then  -- Load reg ADDR RA for register bank register pointer
                 reg_ADDR_RA <= RAM_ADDR_BUS(NREG_WIDTH-1 downto 0);
             end if;
             
-            if(CW_i(7) = '1') then
+            if(CW_i(7) = '1') then  -- Loas reg ADDR RB for register bank register pointer
                 reg_ADDR_RB <= RAM_ADDR_BUS(NREG_WIDTH-1 downto 0);
             end if;
            
-            if(CW_i(3) = '1') then
+            if(CW_i(3) = '1') then  -- Load ALU aux reg_A
                 reg_A <= '0' & unsigned(ALU_DATA_BUS);
             end if;
             
-            if(CW_i(2) = '1') then
+            if(CW_i(2) = '1') then  -- Load ALU aux reg_B
                 reg_B <= '0' & unsigned(ALU_DATA_BUS);
             end if;
            
-            if(CW_i(1) = '1') then
+            if(CW_i(1) = '1') then  -- Load value into Zero flag register
                 if(ALU_RES_BUS(DATA_WIDTH-1 downto 0) = ZEROu) then
                     reg_FZ <= '1';
                 else
@@ -201,7 +195,7 @@ begin
                 end if;
             end if;
            
-            if(CW_i(0) = '1') then 
+            if(CW_i(0) = '1') then  -- Load value into Carry flag register
                 if(ALU_RES_BUS(DATA_WIDTH) = '1') then
                     reg_FC <= '1';
                 else
@@ -249,5 +243,7 @@ begin
     ADDR_RB_o <= reg_ADDR_RB;
     
     REG_INST_o <= reg_INST;
+    
+    ADDR_RAM_o <= RAM_ADDR_BUS;
 
 end Behavioral;

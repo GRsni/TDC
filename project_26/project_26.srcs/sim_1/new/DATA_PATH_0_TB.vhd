@@ -34,8 +34,7 @@ architecture bench of DATA_PATH_0_tb is
               N_ALU:integer:=2;
               ADDR_RAM_WIDTH: positive:=4;
               DATA_ROM_WIDTH:positive:=11;
-              ADDR_ROM_WIDTH:positive:=4;
-              OP_CODE_WIDTH:integer:=3);
+              ADDR_ROM_WIDTH:positive:=4);
       Port ( RST_i: in STD_LOGIC;
              CLK_i : in STD_LOGIC;
              CW_i : in STD_LOGIC_VECTOR (CW_WIDTH-1 downto 0);
@@ -79,8 +78,7 @@ begin
                                  N_ALU          => N_ALU,
                                  ADDR_RAM_WIDTH => ADDR_RAM_WIDTH,
                                  DATA_ROM_WIDTH => DATA_ROM_WIDTH,
-                                 ADDR_ROM_WIDTH => ADDR_ROM_WIDTH,
-                                 OP_CODE_WIDTH  =>  OP_CODE_WIDTH)
+                                 ADDR_ROM_WIDTH => ADDR_ROM_WIDTH)
                       port map ( RST_i          => RST_i,
                                  CLK_i          => CLK_i,
                                  CW_i           => CW_i,
