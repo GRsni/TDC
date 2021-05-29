@@ -323,6 +323,9 @@ begin
     
     ---------- INSTRUCTION ST [15], R3 ------------------
     ---------- 0010          1111 0011 ------------------
+    CW_i <= "000100000110000000000";   -- LOAD_INSTR_ADDR      
+    wait for 10 ns;
+    
     CW_i <= "000000000000000000000";    -- RAM_INSTR_ADDR_UPDATE
     wait for 10 ns;
     

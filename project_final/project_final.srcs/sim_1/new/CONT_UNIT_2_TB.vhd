@@ -35,6 +35,7 @@ architecture bench of CONT_UNIT_2_tb is
              CLK_i : in STD_LOGIC;
              RST_i : in STD_LOGIC;
              FZ_i : in STD_LOGIC;
+             PUSH_i : in STD_LOGIC;
              CW_o : out STD_LOGIC_VECTOR (CW_WIDTH-1 downto 0));
   end component;
   
@@ -45,6 +46,7 @@ architecture bench of CONT_UNIT_2_tb is
   signal CLK_i: STD_LOGIC;
   signal RST_i: STD_LOGIC;
   signal FZ_i: STD_LOGIC;
+  signal PUSH_i: STD_LOGIC;
   signal CW_o: STD_LOGIC_VECTOR (CW_WIDTH-1 downto 0);
 
   constant clock_period: time := 10 ns;
@@ -59,6 +61,7 @@ begin
                                  CLK_i     => CLK_i,
                                  RST_i     => RST_i,
                                  FZ_i      => FZ_i,
+                                 PUSH_i    => PUSH_i,
                                  CW_o      => CW_o );
 
   stimulus: process
@@ -69,9 +72,9 @@ begin
     wait for 10 ns;
     RST_i <= '0'; 
     wait for 10 ns;
-  
 
     -- Put test bench stimulus code here
+    PUSH_i <= '1';
     COP_i <= "0000";
     FZ_i <= '0';
     wait for 100 ns;

@@ -76,7 +76,8 @@ constant OUTPUT_ADD_OP                          :STD_LOGIC_VECTOR(CW_WIDTH-1 dow
 constant OUTPUT_SUB_OP                          :STD_LOGIC_VECTOR(CW_WIDTH-1 downto 0):="011000000000001000011";
 constant OUTPUT_INC_OP                          :STD_LOGIC_VECTOR(CW_WIDTH-1 downto 0):="100000000000001000011";
 constant OUTPUT_DEC_OP                          :STD_LOGIC_VECTOR(CW_WIDTH-1 downto 0):="101000000000001000011";
-constant OUTPUT_BEZ_OP                          :STD_LOGIC_VECTOR(CW_WIDTH-1 downto 0):="000111000110000000011";
+constant OUTPUT_BEZ_OP                          :STD_LOGIC_VECTOR(CW_WIDTH-1 downto 0):="000111000000000000000";
+constant OUTPUT_BEZ_INST                        :STD_LOGIC_VECTOR(CW_WIDTH-1 downto 0):="000111000110000000000";
 
 
 begin
@@ -115,6 +116,8 @@ begin
                                 CURRENT_STATE <= IDLE;
                         end case;
                     when BEZ_OP =>
+                        CURRENT_STATE <= BEZ_INST;
+                    when BEZ_INST =>
                         CURRENT_STATE <= RAM_INST_ADDR_UPDATE;
                     when LOAD_RA_ADDR =>
                         CURRENT_STATE <= LOAD_ALU_REG_A;
@@ -182,6 +185,7 @@ begin
                  OUTPUT_INC_OP                          when INC_OP,
                  OUTPUT_DEC_OP                          when DEC_OP,
                  OUTPUT_BEZ_OP                          when BEZ_OP,
+                 OUTPUT_BEZ_INST                          when BEZ_INST,
                  OUTPUT_IDLE                            when others;
 
 end Behavioral;

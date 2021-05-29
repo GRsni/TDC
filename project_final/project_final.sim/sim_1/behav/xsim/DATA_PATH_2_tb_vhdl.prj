@@ -8,6 +8,8 @@ vhdl xil_defaultlib  \
 "../../../../project_final.srcs/sources_1/imports/sources_1/imports/TDC/project_07/project_07.srcs/sources_1/new/MUX4.vhd" \
 "../../../../project_final.srcs/sources_1/imports/sources_1/imports/TDC/project_17/project_17.srcs/sources_1/new/COUNTER_N_bits.vhd" \
 "../../../../project_final.srcs/sources_1/imports/sources_1/imports/TDC/project_20/project_20.srcs/sources_1/new/PRESCALER_1Hz.vhd" \
+"../../../../project_final.srcs/sources_1/imports/new/EdgeDetector_Debounce.vhd" \
+"../../../../project_final.srcs/sources_1/imports/new/EDGE_DETECTOR_00.vhd" \
 "../../../../project_final.srcs/sim_1/new/DATA_PATH_2_TB.vhd" \
 "../../../../project_final.srcs/sim_1/new/CONT_UNIT_2_TB.vhd" \
 "../../../../project_final.srcs/sim_1/new/DIDACOMP_2_TB.vhd" \
