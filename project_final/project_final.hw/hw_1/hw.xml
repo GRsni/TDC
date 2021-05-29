@@ -9,7 +9,7 @@
     <Object name="xc7a100t_0" gui_info="">
       <Properties Property="FULL_PROBES.FILE" value=""/>
       <Properties Property="PROBES.FILE" value=""/>
-      <Properties Property="PROGRAM.HW_BITSTREAM" value="$_project_name_.runs/impl_1/DIDACOMP_2.bit"/>
+      <Properties Property="PROGRAM.HW_BITSTREAM" value="C:/GII/TDC/project_30/project_30.runs/impl_1/DIDACOMP_Nexys4.bit"/>
       <Properties Property="SLR.COUNT" value="1"/>
     </Object>
   </ObjectList>

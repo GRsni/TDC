@@ -238,7 +238,7 @@ begin
     
     ALU_RESULT_o <= std_logic_vector(ALU_RES_BUS(DATA_WIDTH-1 downto 0));
     
-    DATA_BUS_o <= ALU_DATA_BUS;
+    DATA_BUS_o <= reg_DATA_RAM(DATA_WIDTH-1 downto 0);
     
     ADDR_RA_o <= reg_ADDR_RA;
     
@@ -248,6 +248,6 @@ begin
     
     REG_PC_o <= reg_PC;
     
-    ADDR_RAM_o <= RAM_ADDR_BUS;
+    ADDR_RAM_o <= reg_ADDR_RAM;
 
 end Behavioral;

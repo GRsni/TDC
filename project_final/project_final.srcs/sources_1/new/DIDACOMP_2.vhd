@@ -137,6 +137,9 @@ signal ADDR_RA: STD_LOGIC_VECTOR(NREG_WIDTH-1 downto 0);    --dummy
 signal ADDR_RB: STD_LOGIC_VECTOR(NREG_WIDTH-1 downto 0);    --dummy
 signal CW_CU: STD_LOGIC_VECTOR(CW_WIDTH-1 downto 0);        --dummy
 signal CW_DEBOUNCED: STD_LOGIC_VECTOR(CW_WIDTH-1 downto 0);
+signal CW_11: STD_LOGIC;                                    --dummy
+signal CW_14: STD_LOGIC;                                    --dummy
+signal CW_17: STD_LOGIC;                                    --dummy
 signal INST: STD_LOGIC_VECTOR(DATA_RAM_WIDTH-1 downto 0);   --dummy
 signal PC: unsigned(ADDR_RAM_WIDTH-1 downto 0);             --dummy
 signal FZ: STD_LOGIC;                                       --dummy
@@ -191,21 +194,31 @@ DATA_PATH: DATA_PATH_2
               REG_INST_o => INST,
               ADDR_RAM_o => DATA6,
               REG_PC_o => PC);
-              
-CW17: EDGE_DETECTOR_00
+       
+CW11: EDGE_DETECTOR_00      -- LOAD REG_RAM_ADDR
+    Port map( 
+          RST_i => RST_i,
+          PUSH_i => CW_CU(11),
+          CLK_i => CLK_i, 
+          PULSE_o => CW_11);
+            
+CW14: EDGE_DETECTOR_00      -- LOAD REG INSTR
+   Port map( 
+          RST_i => RST_i,
+          PUSH_i => CW_CU(14),
+          CLK_i => CLK_i,
+          PULSE_o => CW_14);
+             
+CW17: EDGE_DETECTOR_00      -- UPDATE REG PC
     Port map( 
             RST_i => RST_i,
             PUSH_i => CW_CU(17),
             CLK_i => CLK_i, 
-            PULSE_o => CW_debounced(17));
+            PULSE_o => CW_17);
        
-CW14: EDGE_DETECTOR_00 
-    Port map( 
-            RST_i => RST_i,
-            PUSH_i => CW_CU(14),
-            CLK_i => CLK_i,
-            PULSE_o => CW_debounced(14));
+
                 
+               
 DISP: DISP8ON
     Generic map(
             DATA_WIDTH => DATA_WIDTH)
@@ -230,8 +243,8 @@ FZ_o <= FZ;
 
 INST_o <= INST;
 
-CW_DEBOUNCED <= CW_CU(CW_WIDTH-1 downto 18) & CW_DEBOUNCED(17) & CW_CU(16 downto 15) &
-                CW_DEBOUNCED(14) & CW_CU(13 downto 0);
+CW_DEBOUNCED <= CW_CU(CW_WIDTH-1 downto 18) & CW_17 & CW_CU(16 downto 15) &
+                CW_14 & CW_CU(13 downto 12) & CW_11 & CW_CU(10 downto 0);
 
 DATA4 <= '0' & ADDR_RA;
 

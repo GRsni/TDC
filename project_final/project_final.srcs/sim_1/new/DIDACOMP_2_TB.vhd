@@ -38,6 +38,7 @@ architecture bench of DIDACOMP_2_tb is
               COP_WIDTH: integer:=4);
       Port ( CLK_i : in STD_LOGIC;
              RST_i : in STD_LOGIC;
+             PUSH_i : in STD_LOGIC;
              FZ_o : out STD_LOGIC;
              FC_o : out STD_LOGIC;
              INST_o: out STD_LOGIC_VECTOR (DATA_RAM_WIDTH-1 downto 0);
@@ -54,6 +55,7 @@ architecture bench of DIDACOMP_2_tb is
   constant COP_WIDTH: integer:=4;
   signal CLK_i: STD_LOGIC;
   signal RST_i: STD_LOGIC;
+  signal PUSH_i: STD_LOGIC;
   signal FZ_o: STD_LOGIC;
   signal FC_o: STD_LOGIC;
   signal INST_o: STD_LOGIC_VECTOR (DATA_RAM_WIDTH-1 downto 0);
@@ -74,6 +76,7 @@ begin
                                 COP_WIDTH      => COP_WIDTH       )
                      port map ( CLK_i          => CLK_i,
                                 RST_i          => RST_i,
+                                PUSH_i         => PUSH_i,
                                 FZ_o           => FZ_o,
                                 FC_o           => FC_o,
                                 INST_o         => INST_o,
@@ -87,10 +90,52 @@ begin
     RST_i <= '1';
     wait for 10 ns;
     RST_i <= '0';
+    PUSH_i <= '0';
     wait for 10 ns;
-
     -- Put test bench stimulus code here
-    wait for 2000 ns;
+    
+    PUSH_i <= '1';
+    wait for 100 ms;
+    PUSH_i <= '0';
+    wait for 250 ms;
+    PUSH_i <= '1';
+    wait for 100 ms;
+    PUSH_i <= '0';
+    wait for 250 ms;
+    PUSH_i <= '1';
+    wait for 100 ms;
+    PUSH_i <= '0';
+    wait for 250 ms;
+    PUSH_i <= '1';
+    wait for 100 ms;
+    PUSH_i <= '0';
+    wait for 250 ms;
+    PUSH_i <= '1';
+    wait for 100 ms;
+    PUSH_i <= '0';
+    wait for 250 ms;
+    PUSH_i <= '1';
+    wait for 100 ms;
+    PUSH_i <= '0';
+    wait for 250 ms;
+
+    PUSH_i <= '1';
+    wait for 100 ms;
+    PUSH_i <= '0';
+    wait for 250 ms;
+    PUSH_i <= '1';
+    wait for 100 ms;
+    PUSH_i <= '0';
+    wait for 250 ms;
+    PUSH_i <= '1';
+    wait for 100 ms;
+    PUSH_i <= '0';
+    wait for 250 ms;
+    PUSH_i <= '1';
+    wait for 100 ms;
+    PUSH_i <= '0';
+    wait for 250 ms;
+
     wait;
   end process;
 

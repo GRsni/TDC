@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1622253061">
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1622309922">
   <File Type="PA-TCL" Name="DIDACOMP_2.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="DIDACOMP_2_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="DIDACOMP_2_reports.tcl"/>

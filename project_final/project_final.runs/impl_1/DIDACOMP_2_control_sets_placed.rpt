@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Sat May 29 03:52:05 2021
+| Date         : Sat May 29 19:39:44 2021
 | Host         : DESKTOP-3QO6TRU running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file DIDACOMP_2_control_sets_placed.rpt
 | Design       : DIDACOMP_2
@@ -24,7 +24,7 @@ Table of Contents
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
 | Number of unique control sets                            |    15 |
-| Unused register locations in slices containing registers |    28 |
+| Unused register locations in slices containing registers |    24 |
 +----------------------------------------------------------+-------+
 
 
@@ -48,10 +48,10 @@ Table of Contents
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | No           | No                    | No                     |              24 |            2 |
-| No           | No                    | Yes                    |              58 |           12 |
+| No           | No                    | Yes                    |              62 |           15 |
 | No           | Yes                   | No                     |               0 |            0 |
 | Yes          | No                    | No                     |              50 |            7 |
-| Yes          | No                    | Yes                    |             160 |           32 |
+| Yes          | No                    | Yes                    |             160 |           34 |
 | Yes          | Yes                   | No                     |               0 |            0 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
@@ -64,19 +64,19 @@ Table of Contents
 +------------------+----------------------------------------------+------------------+------------------+----------------+
 |  CLK_i_IBUF_BUFG | CONTROL_UNIT/reg_FC_reg_1                    | RST_i_IBUF       |                1 |              2 |
 |  CLK_i_IBUF_BUFG | CONTROL_UNIT/out[3]                          | RST_i_IBUF       |                1 |              6 |
-|  CLK_i_IBUF_BUFG | CONTROL_UNIT/out[5]                          | RST_i_IBUF       |                1 |              6 |
-|  CLK_i_IBUF_BUFG | CONTROL_UNIT/E[0]                            | RST_i_IBUF       |                1 |              8 |
-|  CLK_i_IBUF_BUFG | CONTROL_UNIT/CW_DEBOUNCED[1]                 | RST_i_IBUF       |                3 |              8 |
+|  CLK_i_IBUF_BUFG | CONTROL_UNIT/out[5]                          | RST_i_IBUF       |                2 |              6 |
 |  CLK_i_IBUF_BUFG | CONTROL_UNIT/reg_B_reg[3][0]                 | RST_i_IBUF       |                1 |              8 |
+|  CLK_i_IBUF_BUFG | CONTROL_UNIT/E[0]                            | RST_i_IBUF       |                2 |              8 |
+|  CLK_i_IBUF_BUFG | CW11/E[0]                                    | RST_i_IBUF       |                3 |              8 |
 |  CLK_i_IBUF_BUFG | CW17/E[0]                                    | RST_i_IBUF       |                2 |              8 |
-|  CLK_i_IBUF_BUFG | CONTROL_UNIT/reg_A_reg[1]                    |                  |                1 |             16 |
+|  CLK_i_IBUF_BUFG | CONTROL_UNIT/p_0_in1_in                      |                  |                1 |             16 |
 |  CLK_i_IBUF_BUFG |                                              |                  |                2 |             24 |
-|  CLK_i_IBUF_BUFG | CONTROL_UNIT/CW_DEBOUNCED[2]                 | RST_i_IBUF       |                5 |             24 |
+|  CLK_i_IBUF_BUFG | CONTROL_UNIT/CW_CU[1]                        | RST_i_IBUF       |                5 |             24 |
 |  CLK_i_IBUF_BUFG | CONTROL_UNIT/out[8]                          |                  |                3 |             24 |
 |  CLK_i_IBUF_BUFG | DEBOUNCE/FSM_onehot_CURRENT_STATE_reg[20][0] | RST_i_IBUF       |                9 |             42 |
 |  CLK_i_IBUF_BUFG | CW14/E[0]                                    | RST_i_IBUF       |                8 |             48 |
 |  CLK_i_IBUF_BUFG | DEBOUNCE/Timer_count0                        |                  |                7 |             50 |
-|  CLK_i_IBUF_BUFG |                                              | RST_i_IBUF       |               12 |             58 |
+|  CLK_i_IBUF_BUFG |                                              | RST_i_IBUF       |               15 |             62 |
 +------------------+----------------------------------------------+------------------+------------------+----------------+
 
 

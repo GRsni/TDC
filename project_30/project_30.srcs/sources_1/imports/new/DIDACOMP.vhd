@@ -101,6 +101,8 @@ signal INST: STD_LOGIC_VECTOR(DATA_ROM_WIDTH-1 downto 0); --dummy
 signal FZ: STD_LOGIC; --dummy
 signal CW_CU: STD_LOGIC_VECTOR(CW_WIDTH-1 downto 0); --dummy
 signal CW_debounced: STD_LOGIC_VECTOR(CW_WIDTH-1 downto 0);
+signal CW_6: STD_LOGIC;
+signal CW_4: STD_LOGIC;
 
 begin
 
@@ -119,13 +121,13 @@ CW4: EDGE_DETECTOR_00
     Port map( RST_i => RST_i,
            PUSH_i => CW_CU(4),
            CLK_i => CLK_i,
-           PULSE_o => CW_debounced(4));
+           PULSE_o => CW_4);
            
 CW6: EDGE_DETECTOR_00 
     Port map( RST_i => RST_i,
           PUSH_i => CW_CU(6),
           CLK_i => CLK_i,
-          PULSE_o => CW_debounced(6));
+          PULSE_o => CW_6);
             
 DATA_PATH: DATA_PATH_0
     Generic map(DATA_RAM_WIDTH =>DATA_RAM_WIDTH,
@@ -150,7 +152,7 @@ DATA_PATH: DATA_PATH_0
            
 
 -- Concat CW_CU into CW_debounced
-CW_debounced <= CW_CU(CW_WIDTH-1 downto 7) & CW_debounced(6) & CW_CU(5) & CW_debounced(4) & CW_CU(3 downto 0);
+CW_debounced <= CW_CU(CW_WIDTH-1 downto 7) & CW_6 & CW_CU(5) & CW_4 & CW_CU(3 downto 0);
 
 -- Assign dummy signals to outputs
 FZ_o <=FZ;
