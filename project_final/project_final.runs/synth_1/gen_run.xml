@@ -1,30 +1,105 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1622062449">
-  <File Type="PA-TCL" Name="DATA_PATH_2.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="DATA_PATH_2_drc_synth.rpt"/>
-  <File Type="REPORTS-TCL" Name="DATA_PATH_2_reports.tcl"/>
-  <File Type="RDS-RDS" Name="DATA_PATH_2.vds"/>
-  <File Type="RDS-UTIL" Name="DATA_PATH_2_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="DATA_PATH_2_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="DATA_PATH_2.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="DATA_PATH_2_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="DATA_PATH_2_timing_summary_synth.pb"/>
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1622253061">
+  <File Type="PA-TCL" Name="DIDACOMP_2.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="DIDACOMP_2_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="DIDACOMP_2_reports.tcl"/>
+  <File Type="RDS-RDS" Name="DIDACOMP_2.vds"/>
+  <File Type="RDS-UTIL" Name="DIDACOMP_2_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="DIDACOMP_2_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="DIDACOMP_2.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="DIDACOMP_2_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="DIDACOMP_2_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/CONT_UNIT_2.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/DATA_PATH_2.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/DIDACOMP_2.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/sources_1/imports/TDC/project_08/project_08.srcs/sources_1/new/DISP7SEG.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../project_21/project_21.srcs/sources_1/imports/TDC/project_08/project_08.srcs/sources_1/new/DISP7SEG.vhd"/>
+        <Attr Name="ImportTime" Val="1617786232"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/sources_1/new/DISP8ON.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../project_21/project_21.srcs/sources_1/new/DISP8ON.vhd"/>
+        <Attr Name="ImportTime" Val="1617796768"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/sources_1/imports/TDC/project_07/project_07.srcs/sources_1/new/MUX4.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../project_21/project_21.srcs/sources_1/imports/TDC/project_07/project_07.srcs/sources_1/new/MUX4.vhd"/>
+        <Attr Name="ImportTime" Val="1617793002"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/sources_1/imports/TDC/project_17/project_17.srcs/sources_1/new/COUNTER_N_bits.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../project_21/project_21.srcs/sources_1/imports/TDC/project_17/project_17.srcs/sources_1/new/COUNTER_N_bits.vhd"/>
+        <Attr Name="ImportTime" Val="1617788006"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/sources_1/imports/TDC/project_20/project_20.srcs/sources_1/new/PRESCALER_1Hz.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../project_21/project_21.srcs/sources_1/imports/TDC/project_20/project_20.srcs/sources_1/new/PRESCALER_1Hz.vhd"/>
+        <Attr Name="ImportTime" Val="1617792902"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/EdgeDetector_Debounce.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../project_27/project_27.srcs/sources_1/new/EdgeDetector_Debounce.vhd"/>
+        <Attr Name="ImportTime" Val="1621011910"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/EDGE_DETECTOR_00.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../project_15/project_15.srcs/sources_1/new/EDGE_DETECTOR_00.vhd"/>
+        <Attr Name="ImportTime" Val="1615976724"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="DATA_PATH_2"/>
-      <Option Name="TopAutoSet" Val="TRUE"/>
+      <Option Name="TopModule" Val="DIDACOMP_2"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
     <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/imports/project_final/DIDACOMP_2.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/DIDACOMP_2.xdc"/>
+        <Attr Name="ImportTime" Val="1612957024"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="ConstrsType" Val="XDC"/>
     </Config>

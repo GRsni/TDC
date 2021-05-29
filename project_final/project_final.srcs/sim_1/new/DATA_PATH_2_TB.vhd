@@ -13,7 +13,8 @@ architecture bench of DATA_PATH_2_tb is
               ADDR_RAM_WIDTH: integer:=4;
               CW_WIDTH: integer:=21;
               N_ALU: integer:=3;
-              NREG_WIDTH: integer:=3);
+              NREG_WIDTH: integer:=3;
+              COP_WIDTH: integer:=4);
       Port (  RST_i : in STD_LOGIC;
               CLK_i : in STD_LOGIC;
               CW_i : in STD_LOGIC_VECTOR(CW_WIDTH-1 downto 0);
@@ -35,6 +36,7 @@ architecture bench of DATA_PATH_2_tb is
    constant ADDR_RAM_WIDTH: integer:=4;
    constant NREG_WIDTH: integer:=3;
    constant N_ALU:integer:=3;
+   constant COP_WIDTH:integer:=4;
 
   signal RST_i: STD_LOGIC;
   signal CLK_i: STD_LOGIC;
@@ -61,7 +63,8 @@ begin
                                  ADDR_RAM_WIDTH =>ADDR_RAM_WIDTH,
                                  CW_WIDTH       =>CW_WIDTH      ,
                                  N_ALU          =>N_ALU         ,
-                                 NREG_WIDTH     =>NREG_WIDTH     )
+                                 NREG_WIDTH     =>NREG_WIDTH     ,
+                                 COP_WIDTH      =>COP_WIDTH     )
                       port map ( RST_i          => RST_i,
                                  CLK_i          => CLK_i,
                                  CW_i           => CW_i,
@@ -89,10 +92,10 @@ begin
     
     ---------- INSTRUCTION LD [11], [7] ------------------
     ---------- 0000           1011 0111 ------------------
-    CW_i <= "000000000110000000000";    -- Load INSTRUCTION ADDR
+    CW_i <= "000100000110000000000";    -- LOAD_INSTR_ADDR
     wait for 10 ns;
     
-    CW_i <= "000100000000000000000";    -- Update PC
+    CW_i <= "000000000000000000000";    -- RAM_INSTR_ADDR_UPDATE
     wait for 10 ns;
     
     CW_i <= "000000100000000000000";    -- FETCH
@@ -101,66 +104,60 @@ begin
     CW_i <= "000000000000000000000";    -- DECODE
     wait for 10 ns;
     
-    CW_i <= "000000000100000000000";    -- Load RAM ADDR
-    wait for 10 ns;
-
-    CW_i <= "000000000000000000000";    -- Wait for RAM ADDR to update
+    CW_i <= "000000000100000000000";    -- LOAD_RAM_ADDR
     wait for 10 ns;
         
-    CW_i <= "000000011000010000000";    -- Load RB RAM DATA
+    CW_i <= "000001000000010000000";    -- LOAD_RB_ADDR
     wait for 10 ns;
     
-    CW_i <= "000001000000010000000";    -- Load RB REG ADDR
+    CW_i <= "000000011000000000000";    -- LOAD_RAM_DATA
     wait for 10 ns;
     
-    CW_i <= "000000000000000100100";    -- Load ALU reg_B
+    CW_i <= "000000000000000100100";    -- LOAD_ALU_REG_B
     wait for 10 ns;
     
-    CW_i <= "000000000000001000011";    -- Load data into RB
+    CW_i <= "000000000000001000011";    -- LD_OP
     wait for 10 ns;   
     ------------------------------------------------------
     
     
     ---------- INSTRUCTION LD [13], R7 ------------------
     ---------- 0000           1101 0001 ------------------
-    CW_i <= "000000000110000000000";    -- Load INSTRUCTION ADDR
+    CW_i <= "000100000110000000000";    -- LOAD_INSTR_ADDR      
     wait for 10 ns;
     
-    CW_i <= "000100000000000000000";    -- Update PC
+    CW_i <= "000000000000000000000";    -- RAM_INSTR_ADDR_UPDATE
     wait for 10 ns;
     
-    CW_i <= "000000100000000000000";    -- FETCH
+    CW_i <= "000000100000000000000";    -- FETCH                
     wait for 10 ns;
     
-    CW_i <= "000000000000000000000";    -- DECODE
+    CW_i <= "000000000000000000000";    -- DECODE               
     wait for 10 ns;
     
-    CW_i <= "000000000100000000000";    -- Load RAM ADDR
-    wait for 10 ns;
-
-    CW_i <= "000000000000000000000";    -- Wait for RAM ADDR to update
+    CW_i <= "000000000100000000000";    -- LOAD_RAM_ADDR        
     wait for 10 ns;
         
-    CW_i <= "000000011000010000000";    -- Load RB RAM DATA
+    CW_i <= "000001000000010000000";    -- LOAD_RB_ADDR         
     wait for 10 ns;
     
-    CW_i <= "000001000000010000000";    -- Load RB REG ADDR
+    CW_i <= "000000011000000000000";    -- LOAD_RAM_DATA        
     wait for 10 ns;
     
-    CW_i <= "000000000000000100100";    -- Load ALU reg_B
+    CW_i <= "000000000000000100100";    -- LOAD_ALU_REG_B       
     wait for 10 ns;
     
-    CW_i <= "000000000000001000011";    -- Load data into RB
+    CW_i <= "000000000000001000011";    -- LD_OP                
     wait for 10 ns;  
     ------------------------------------------------------
         
         
     ---------- INSTRUCTION SUB R7, R1 ------------------
     ---------- 0011         0111 0001 ------------------
-    CW_i <= "000000000110000000000";    -- Load INSTRUCTION ADDR
+    CW_i <= "000100000110000000000";    -- LOAD_INSTR_ADDR
     wait for 10 ns;
     
-    CW_i <= "000100000000000000000";    -- Update PC
+    CW_i <= "000000000000000000000";    -- RAM_INSTR_ADDR_UPDATE
     wait for 10 ns;
     
     CW_i <= "000000100000000000000";    -- FETCH
@@ -169,47 +166,47 @@ begin
     CW_i <= "000000000000000000000";    -- DECODE
     wait for 10 ns;
     
-    CW_i <= "000000000000100000000";    -- Load ADDR RA
+    CW_i <= "000000000000100000000";    -- LOAD_RA_ADDR
     wait for 10 ns;
     
-    CW_i <= "000000000000000001000";    -- Load ALU reg_A
+    CW_i <= "000000000000000001000";    -- LOAD_ALU_REG_A
     wait for 10 ns;
     
-    CW_i <= "000001000000010000000";    -- Load ADDR RB
+    CW_i <= "000001000000010000000";    -- LOAD_RB_ADDR
     wait for 10 ns;
     
-    CW_i <= "000000000000000010100";    -- Load ALU reg_B
+    CW_i <= "000000000000000010100";    -- LOAD_ALU_REG_B
     wait for 10 ns;
     
-    CW_i <= "011000000000001000011";    -- SUB RA, RB
+    CW_i <= "011000000000001000011";    -- SUB_OP
     wait for 10 ns;
     -------------------------------------------------------
     
     
     ---------- INSTRUCTION INC 2, R1 ------------------
     ---------- 0011         0010 0001 ------------------
-    CW_i <= "000000000110000000000";    -- Load INSTRUCTION ADDR      
-    wait for 10 ns;                                                   
-                                                                 
-    CW_i <= "000100000000000000000";    -- Update PC                  
-    wait for 10 ns;                                                   
-    
-    CW_i <= "000000100000000000000";    -- FETCH
+    CW_i <= "000100000110000000000";    -- LOAD_INSTR_ADDR      
     wait for 10 ns;
     
-    CW_i <= "000000000000000000000";    -- DECODE
+    CW_i <= "000000000000000000000";    -- RAM_INSTR_ADDR_UPDATE
     wait for 10 ns;
     
-    CW_i <= "000000000000000111000";    -- Load inmediate into reg_A
+    CW_i <= "000000100000000000000";    -- FETCH                
     wait for 10 ns;
     
-    CW_i <= "000001000000010000000";    -- Load ADDR RB
+    CW_i <= "000000000000000000000";    -- DECODE               
     wait for 10 ns;
     
-    CW_i <= "000000000000000010100";    -- Load ALU reg_B
+    CW_i <= "000000000000000111000";    -- LOAD_INM_REG_A        
     wait for 10 ns;
     
-    CW_i <= "100000000000001000011";    -- INC inm, RB
+    CW_i <= "000001000000010000000";    -- LOAD_RB_ADDR
+    wait for 10 ns;
+    
+    CW_i <= "000000000000000010100";    -- LOAD_ALU_REG_B
+    wait for 10 ns;
+    
+    CW_i <= "100000000000001000011";    -- INC_OP
     wait for 10 ns;
     
     -------------------------------------------------------
@@ -217,122 +214,116 @@ begin
         
     ---------- INSTRUCTION DEC 8, R1 ------------------
     ---------- 0011          1000 0001 ------------------
-    CW_i <= "000000000110000000000";    -- Load INSTRUCTION ADDR
+    CW_i <= "000100000110000000000";    -- LOAD_INSTR_ADDR      
     wait for 10 ns;
     
-    CW_i <= "000100000000000000000";    -- Update PC
+    CW_i <= "000000000000000000000";    -- RAM_INSTR_ADDR_UPDATE
     wait for 10 ns;
     
-    CW_i <= "000000100000000000000";    -- FETCH
+    CW_i <= "000000100000000000000";    -- FETCH                
     wait for 10 ns;
     
-    CW_i <= "000000000000000000000";    -- DECODE
+    CW_i <= "000000000000000000000";    -- DECODE               
     wait for 10 ns;
     
-    CW_i <= "000000000000000111000";    -- Load inmediate into reg_A
+    CW_i <= "000000000000000111000";    -- LOAD_INM_REG_A
     wait for 10 ns;
     
-    CW_i <= "000001000000010000000";    -- Load ADDR RB
+    CW_i <= "000001000000010000000";    -- LOAD_RB_ADDR
     wait for 10 ns;
     
-    CW_i <= "000000000000000010100";    -- Load ALU reg_B
+    CW_i <= "000000000000000010100";    -- LOAD_ALU_REG_B
     wait for 10 ns;
     
-    CW_i <= "101000000000001000011";    -- INC inm, RB
+    CW_i <= "101000000000001000011";    -- DEC_OP
     wait for 10 ns;
     ------------------------------------------------------
        
        
-    ---------- INSTRUCTION LD [15], R3 ------------------
-    ---------- 0000           1111 0011 ------------------
-    CW_i <= "000000000110000000000";    -- Load INSTRUCTION ADDR
+    ---------- INSTRUCTION LD [14], R3 ------------------
+    ---------- 0000           1110 0011 ------------------
+    CW_i <= "000100000110000000000";    -- LOAD_INSTR_ADDR      
     wait for 10 ns;
     
-    CW_i <= "000100000000000000000";    -- Update PC
+    CW_i <= "000000000000000000000";    -- RAM_INSTR_ADDR_UPDATE
     wait for 10 ns;
     
-    CW_i <= "000000100000000000000";    -- FETCH
+    CW_i <= "000000100000000000000";    -- FETCH                
     wait for 10 ns;
     
-    CW_i <= "000000000000000000000";    -- DECODE
+    CW_i <= "000000000000000000000";    -- DECODE               
     wait for 10 ns;
     
-    CW_i <= "000000000100000000000";    -- Load RAM ADDR
+    CW_i <= "000000000100000000000";    -- LOAD_RAM_ADDR        
+    wait for 10 ns;
+        
+    CW_i <= "000001000000010000000";    -- LOAD_RB_ADDR         
     wait for 10 ns;
     
-    CW_i <= "000000000000000000000";    -- Wait for RAM ADDR to update
-    wait for 10 ns;
-       
-    CW_i <= "000000011000010000000";    -- Load RB RAM DATA
+    CW_i <= "000000011000000000000";    -- LOAD_RAM_DATA        
     wait for 10 ns;
     
-    CW_i <= "000001000000010000000";    -- Load RB REG ADDR
+    CW_i <= "000000000000000100100";    -- LOAD_ALU_REG_B       
     wait for 10 ns;
     
-    CW_i <= "000000000000000100100";    -- Load ALU reg_B
-    wait for 10 ns;
-    
-    CW_i <= "000000000000001000011";    -- Load data into RB
-    wait for 10 ns;  
+    CW_i <= "000000000000001000011";    -- LD_OP                
+    wait for 10 ns;   
     ------------------------------------------------------
             
             
     ---------- INSTRUCTION ADD R7, R3 ------------------
     ---------- 0010         0111 0011 ------------------
-    CW_i <= "000000000110000000000";    -- Load INSTRUCTION ADDR
+    CW_i <= "000100000110000000000";    -- LOAD_INSTR_ADDR      
     wait for 10 ns;
     
-    CW_i <= "000100000000000000000";    -- Update PC
+    CW_i <= "000000000000000000000";    -- RAM_INSTR_ADDR_UPDATE
     wait for 10 ns;
     
-    CW_i <= "000000100000000000000";    -- FETCH
+    CW_i <= "000000100000000000000";    -- FETCH                
     wait for 10 ns;
     
-    CW_i <= "000000000000000000000";    -- DECODE
+    CW_i <= "000000000000000000000";    -- DECODE               
     wait for 10 ns;
     
-    CW_i <= "000000000000100000000";    -- Load ADDR RA
+    CW_i <= "000000000000100000000";    -- LOAD_RA_ADDR
     wait for 10 ns;
     
-    CW_i <= "000000000000000001000";    -- Load ALU reg_A
+    CW_i <= "000000000000000001000";    -- LOAD_ALU_REG_A
     wait for 10 ns;
     
-    CW_i <= "000001000000010000000";    -- Load ADDR RB
+    CW_i <= "000001000000010000000";    -- LOAD_RB_ADDR
     wait for 10 ns;
     
-    CW_i <= "000000000000000010100";    -- Load ALU reg_B
+    CW_i <= "000000000000000010100";    -- LOAD_ALU_REG_B
     wait for 10 ns;
     
-    CW_i <= "010000000000001000011";    -- ADD RA, RB
+    CW_i <= "010000000000001000011";    -- ADD_OP
     wait for 10 ns;
     ------------------------------------------------------
                 
                 
     ---------- INSTRUCTION BEZ     [9]  ------------------
     ---------- 0110          0000 1001  ------------------
-    CW_i <= "000000000110000000000";    -- Load INSTRUCTION ADDR
+    CW_i <= "000100000110000000000";   -- LOAD_INSTR_ADDR      
     wait for 10 ns;
     
-    CW_i <= "000100000000000000000";    -- Update PC
+    CW_i <= "000000000000000000000";   -- RAM_INSTR_ADDR_UPDATE
     wait for 10 ns;
     
-    CW_i <= "000000100000000000000";    -- FETCH
+    CW_i <= "000000100000000000000";   -- FETCH                
     wait for 10 ns;
     
-    CW_i <= "000000000000000000000";    -- DECODE
+    CW_i <= "000000000000000000000";   -- DECODE               
     wait for 10 ns;
     
-    CW_i <= "000111000000000000011";    -- Load jmp PC
+    CW_i <= "000111000110000000011";    -- BEZ_OP
     wait for 10 ns;
     ----------------------------------------------------
     
     
-    ---------- INSTRUCTION ST [12], R3 ------------------
-    ---------- 0010         0111 0011 ------------------
-    CW_i <= "000000000110000000000";    -- Load INSTRUCTION ADDR
-    wait for 10 ns;
-    
-    CW_i <= "000100000000000000000";    -- Update PC
+    ---------- INSTRUCTION ST [15], R3 ------------------
+    ---------- 0010          1111 0011 ------------------
+    CW_i <= "000000000000000000000";    -- RAM_INSTR_ADDR_UPDATE
     wait for 10 ns;
     
     CW_i <= "000000100000000000000";    -- FETCH
@@ -341,6 +332,40 @@ begin
     CW_i <= "000000000000000000000";    -- DECODE
     wait for 10 ns;
     
+    CW_i <= "000000000100000000000";    -- LOAD_RAM_ADDR
+    wait for 10 ns;
+    
+    CW_i <= "000001000000010000000";    -- LOAD_RB_ADDR
+    wait for 10 ns;
+    
+    CW_i <= "000000000000000010100";    -- LOAD_ALU_REG_B
+    wait for 10 ns;
+    
+    CW_i <= "001000010000000000000";    -- LOAD_RB_INTO_RAM_DATA
+    wait for 10 ns;
+    
+    CW_i <= "001000000001000000011";    -- ST_OP
+    wait for 10 ns;
+    -------------------------------------------------------
+    
+    
+    ---------- INSTRUCTION BEZ     [0]  ------------------
+    ---------- 0110          0000 0000  ------------------
+    CW_i <= "000100000110000000000";    -- LOAD_INSTR_ADDR      
+    wait for 10 ns;
+    
+    CW_i <= "000000000000000000000";    -- RAM_INSTR_ADDR_UPDATE
+    wait for 10 ns;
+    
+    CW_i <= "000000100000000000000";    -- FETCH                
+    wait for 10 ns;
+    
+    CW_i <= "000000000000000000000";    -- DECODE               
+    wait for 10 ns;
+    
+    CW_i <= "000111000110000000011";    -- BEZ_OP
+    wait for 10 ns;
+    ----------------------------------------------------
     
     stop_the_clock <= true;
     wait;

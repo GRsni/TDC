@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1622253061">
+  <File Type="BITSTR-BMM" Name="DIDACOMP_2_bd.bmm"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="DIDACOMP_2_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="DIDACOMP_2_timing_summary_init.rpt"/>
+  <File Type="ROUTE-PWR" Name="DIDACOMP_2_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="DIDACOMP_2.tcl"/>
+  <File Type="OPT-TIMING" Name="DIDACOMP_2_timing_summary_opted.rpt"/>
+  <File Type="OPT-DCP" Name="DIDACOMP_2_opt.dcp"/>
+  <File Type="ROUTE-PWR-SUM" Name="DIDACOMP_2_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="DIDACOMP_2_reports.tcl"/>
+  <File Type="OPT-DRC" Name="DIDACOMP_2_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="DIDACOMP_2.hwdef"/>
+  <File Type="PWROPT-DCP" Name="DIDACOMP_2_pwropt.dcp"/>
+  <File Type="PWROPT-DRC" Name="DIDACOMP_2_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="DIDACOMP_2_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="DIDACOMP_2_placed.dcp"/>
+  <File Type="PLACE-IO" Name="DIDACOMP_2_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="DIDACOMP_2_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="DIDACOMP_2_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="DIDACOMP_2_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="DIDACOMP_2_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="DIDACOMP_2_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="DIDACOMP_2_incremental_reuse_pre_placed.rpt"/>
+  <File Type="BG-BGN" Name="DIDACOMP_2.bgn"/>
+  <File Type="PLACE-TIMING" Name="DIDACOMP_2_timing_summary_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="DIDACOMP_2_postplace_pwropt.dcp"/>
+  <File Type="BG-BIN" Name="DIDACOMP_2.bin"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="DIDACOMP_2_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="DIDACOMP_2_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="DIDACOMP_2_drc_physopted.rpt"/>
+  <File Type="BITSTR-MSK" Name="DIDACOMP_2.msk"/>
+  <File Type="PHYSOPT-TIMING" Name="DIDACOMP_2_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="DIDACOMP_2_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="DIDACOMP_2_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="DIDACOMP_2_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="DIDACOMP_2_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="DIDACOMP_2_drc_routed.pb"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="DIDACOMP_2.ltx"/>
+  <File Type="ROUTE-DRC-RPX" Name="DIDACOMP_2_drc_routed.rpx"/>
+  <File Type="BITSTR-MMI" Name="DIDACOMP_2.mmi"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="DIDACOMP_2_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="DIDACOMP_2_methodology_drc_routed.rpx"/>
+  <File Type="BITSTR-SYSDEF" Name="DIDACOMP_2.sysdef"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="DIDACOMP_2_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="DIDACOMP_2_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="DIDACOMP_2_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="DIDACOMP_2_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="DIDACOMP_2_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="DIDACOMP_2_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="DIDACOMP_2_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="DIDACOMP_2_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="DIDACOMP_2_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="DIDACOMP_2_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="DIDACOMP_2_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="DIDACOMP_2_bus_skew_routed.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="DIDACOMP_2_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="DIDACOMP_2_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="DIDACOMP_2_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="DIDACOMP_2_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="DIDACOMP_2_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="DIDACOMP_2_bus_skew_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="DIDACOMP_2_bus_skew_postroute_physopted.pb"/>
+  <File Type="BG-BIT" Name="DIDACOMP_2.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="DIDACOMP_2_bus_skew_postroute_physopted.rpx"/>
+  <File Type="BITSTR-RBT" Name="DIDACOMP_2.rbt"/>
+  <File Type="BITSTR-NKY" Name="DIDACOMP_2.nky"/>
+  <File Type="BG-DRC" Name="DIDACOMP_2.drc"/>
+  <File Type="RDI-RDI" Name="DIDACOMP_2.vdi"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/CONT_UNIT_2.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/DATA_PATH_2.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/DIDACOMP_2.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/sources_1/imports/TDC/project_08/project_08.srcs/sources_1/new/DISP7SEG.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../project_21/project_21.srcs/sources_1/imports/TDC/project_08/project_08.srcs/sources_1/new/DISP7SEG.vhd"/>
+        <Attr Name="ImportTime" Val="1617786232"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/sources_1/new/DISP8ON.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../project_21/project_21.srcs/sources_1/new/DISP8ON.vhd"/>
+        <Attr Name="ImportTime" Val="1617796768"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/sources_1/imports/TDC/project_07/project_07.srcs/sources_1/new/MUX4.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../project_21/project_21.srcs/sources_1/imports/TDC/project_07/project_07.srcs/sources_1/new/MUX4.vhd"/>
+        <Attr Name="ImportTime" Val="1617793002"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/sources_1/imports/TDC/project_17/project_17.srcs/sources_1/new/COUNTER_N_bits.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../project_21/project_21.srcs/sources_1/imports/TDC/project_17/project_17.srcs/sources_1/new/COUNTER_N_bits.vhd"/>
+        <Attr Name="ImportTime" Val="1617788006"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/sources_1/imports/TDC/project_20/project_20.srcs/sources_1/new/PRESCALER_1Hz.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../project_21/project_21.srcs/sources_1/imports/TDC/project_20/project_20.srcs/sources_1/new/PRESCALER_1Hz.vhd"/>
+        <Attr Name="ImportTime" Val="1617792902"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/EdgeDetector_Debounce.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../project_27/project_27.srcs/sources_1/new/EdgeDetector_Debounce.vhd"/>
+        <Attr Name="ImportTime" Val="1621011910"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/EDGE_DETECTOR_00.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../project_15/project_15.srcs/sources_1/new/EDGE_DETECTOR_00.vhd"/>
+        <Attr Name="ImportTime" Val="1615976724"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="DIDACOMP_2"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/imports/project_final/DIDACOMP_2.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/DIDACOMP_2.xdc"/>
+        <Attr Name="ImportTime" Val="1612957024"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+</GenRun>

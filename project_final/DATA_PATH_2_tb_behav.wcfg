@@ -3,162 +3,59 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="DATA_PATH_2_tb_behav.wdb" id="1">
+      <db_ref path="CONT_UNIT_2_tb_behav.wdb" id="1">
          <top_modules>
-            <top_module name="DATA_PATH_2_tb" />
+            <top_module name="CONT_UNIT_2_tb" />
          </top_modules>
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="669430000fs"></ZoomStartTime>
-      <ZoomEndTime time="749528081fs"></ZoomEndTime>
+      <ZoomStartTime time="907375000fs"></ZoomStartTime>
+      <ZoomEndTime time="1018525001fs"></ZoomEndTime>
       <Cursor1Time time="1000000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="175"></NameColumnWidth>
-      <ValueColumnWidth column_width="78"></ValueColumnWidth>
+      <ValueColumnWidth column_width="70"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="32" />
-   <wvobject fp_name="/DATA_PATH_2_tb/RST_i" type="logic">
-      <obj_property name="ElementShortName">RST_i</obj_property>
-      <obj_property name="ObjectShortName">RST_i</obj_property>
-   </wvobject>
-   <wvobject fp_name="/DATA_PATH_2_tb/CLK_i" type="logic">
+   <WVObjectSize size="10" />
+   <wvobject fp_name="/CONT_UNIT_2_tb/CLK_i" type="logic">
       <obj_property name="ElementShortName">CLK_i</obj_property>
       <obj_property name="ObjectShortName">CLK_i</obj_property>
    </wvobject>
-   <wvobject fp_name="/DATA_PATH_2_tb/CW_i" type="array">
-      <obj_property name="ElementShortName">CW_i[20:0]</obj_property>
-      <obj_property name="ObjectShortName">CW_i[20:0]</obj_property>
-      <obj_property name="Radix">BINARYRADIX</obj_property>
+   <wvobject fp_name="/CONT_UNIT_2_tb/RST_i" type="logic">
+      <obj_property name="ElementShortName">RST_i</obj_property>
+      <obj_property name="ObjectShortName">RST_i</obj_property>
    </wvobject>
-   <wvobject fp_name="/DATA_PATH_2_tb/uut/reg_PC" type="array">
-      <obj_property name="ElementShortName">reg_PC[3:0]</obj_property>
-      <obj_property name="ObjectShortName">reg_PC[3:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   <wvobject fp_name="/CONT_UNIT_2_tb/COP_i" type="array">
+      <obj_property name="ElementShortName">COP_i[3:0]</obj_property>
+      <obj_property name="ObjectShortName">COP_i[3:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/DATA_PATH_2_tb/uut/reg_INST" type="array">
-      <obj_property name="ElementShortName">reg_INST[11:0]</obj_property>
-      <obj_property name="ObjectShortName">reg_INST[11:0]</obj_property>
-      <obj_property name="Radix">BINARYRADIX</obj_property>
+   <wvobject fp_name="/CONT_UNIT_2_tb/FZ_i" type="logic">
+      <obj_property name="ElementShortName">FZ_i</obj_property>
+      <obj_property name="ObjectShortName">FZ_i</obj_property>
    </wvobject>
-   <wvobject fp_name="/DATA_PATH_2_tb/uut/reg_ADDR_RAM" type="array">
-      <obj_property name="ElementShortName">reg_ADDR_RAM[3:0]</obj_property>
-      <obj_property name="ObjectShortName">reg_ADDR_RAM[3:0]</obj_property>
-      <obj_property name="Radix">BINARYRADIX</obj_property>
+   <wvobject fp_name="/CONT_UNIT_2_tb/uut/CURRENT_STATE" type="other">
+      <obj_property name="ElementShortName">CURRENT_STATE</obj_property>
+      <obj_property name="ObjectShortName">CURRENT_STATE</obj_property>
    </wvobject>
-   <wvobject fp_name="/DATA_PATH_2_tb/uut/reg_DATA_RAM" type="array">
-      <obj_property name="ElementShortName">reg_DATA_RAM[11:0]</obj_property>
-      <obj_property name="ObjectShortName">reg_DATA_RAM[11:0]</obj_property>
+   <wvobject fp_name="/CONT_UNIT_2_tb/CW_o" type="array">
+      <obj_property name="ElementShortName">CW_o[20:0]</obj_property>
+      <obj_property name="ObjectShortName">CW_o[20:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/DATA_PATH_2_tb/REG_A_o" type="array">
-      <obj_property name="ElementShortName">REG_A_o[3:0]</obj_property>
-      <obj_property name="ObjectShortName">REG_A_o[3:0]</obj_property>
-      <obj_property name="Radix">BINARYRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/DATA_PATH_2_tb/REG_B_o" type="array">
-      <obj_property name="ElementShortName">REG_B_o[3:0]</obj_property>
-      <obj_property name="ObjectShortName">REG_B_o[3:0]</obj_property>
-      <obj_property name="Radix">BINARYRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/DATA_PATH_2_tb/ALU_RESULT_o" type="array">
-      <obj_property name="ElementShortName">ALU_RESULT_o[3:0]</obj_property>
-      <obj_property name="ObjectShortName">ALU_RESULT_o[3:0]</obj_property>
-      <obj_property name="Radix">BINARYRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/DATA_PATH_2_tb/uut/ALU_RES_BUS" type="array">
-      <obj_property name="ElementShortName">ALU_RES_BUS[4:0]</obj_property>
-      <obj_property name="ObjectShortName">ALU_RES_BUS[4:0]</obj_property>
-      <obj_property name="Radix">BINARYRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/DATA_PATH_2_tb/ADDR_RA_o" type="array">
-      <obj_property name="ElementShortName">ADDR_RA_o[2:0]</obj_property>
-      <obj_property name="ObjectShortName">ADDR_RA_o[2:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/DATA_PATH_2_tb/ADDR_RB_o" type="array">
-      <obj_property name="ElementShortName">ADDR_RB_o[2:0]</obj_property>
-      <obj_property name="ObjectShortName">ADDR_RB_o[2:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/DATA_PATH_2_tb/FZ_o" type="logic">
-      <obj_property name="ElementShortName">FZ_o</obj_property>
-      <obj_property name="ObjectShortName">FZ_o</obj_property>
-   </wvobject>
-   <wvobject fp_name="/DATA_PATH_2_tb/FC_o" type="logic">
-      <obj_property name="ElementShortName">FC_o</obj_property>
-      <obj_property name="ObjectShortName">FC_o</obj_property>
-   </wvobject>
-   <wvobject fp_name="/DATA_PATH_2_tb/uut/RAM_ADDR_BUS" type="array">
-      <obj_property name="ElementShortName">RAM_ADDR_BUS[3:0]</obj_property>
-      <obj_property name="ObjectShortName">RAM_ADDR_BUS[3:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/DATA_PATH_2_tb/uut/RAM_DATA_BUS" type="array">
-      <obj_property name="ElementShortName">RAM_DATA_BUS[11:0]</obj_property>
-      <obj_property name="ObjectShortName">RAM_DATA_BUS[11:0]</obj_property>
-      <obj_property name="Radix">BINARYRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/DATA_PATH_2_tb/uut/PC_OUT_BUS" type="array">
-      <obj_property name="ElementShortName">PC_OUT_BUS[3:0]</obj_property>
-      <obj_property name="ObjectShortName">PC_OUT_BUS[3:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/DATA_PATH_2_tb/DATA_BUS_o" type="array">
-      <obj_property name="ElementShortName">DATA_BUS_o[3:0]</obj_property>
-      <obj_property name="ObjectShortName">DATA_BUS_o[3:0]</obj_property>
-      <obj_property name="Radix">BINARYRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/DATA_PATH_2_tb/uut/REG_INST_o" type="array">
-      <obj_property name="ElementShortName">REG_INST_o[11:0]</obj_property>
-      <obj_property name="ObjectShortName">REG_INST_o[11:0]</obj_property>
-      <obj_property name="Radix">BINARYRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/DATA_PATH_2_tb/uut/ADDR_RAM_o" type="array">
-      <obj_property name="ElementShortName">ADDR_RAM_o[3:0]</obj_property>
-      <obj_property name="ObjectShortName">ADDR_RAM_o[3:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/DATA_PATH_2_tb/uut/ALU_DATA_BUS" type="array">
-      <obj_property name="ElementShortName">ALU_DATA_BUS[3:0]</obj_property>
-      <obj_property name="ObjectShortName">ALU_DATA_BUS[3:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/DATA_PATH_2_tb/uut/RAM" type="array">
-      <obj_property name="ElementShortName">RAM[15:0][11:0]</obj_property>
-      <obj_property name="ObjectShortName">RAM[15:0][11:0]</obj_property>
-      <obj_property name="CustomSignalColor">#A0A0A4</obj_property>
-      <obj_property name="UseCustomSignalColor">true</obj_property>
-   </wvobject>
-   <wvobject fp_name="/DATA_PATH_2_tb/uut/REG_BANK" type="array">
-      <obj_property name="ElementShortName">REG_BANK[7:0][3:0]</obj_property>
-      <obj_property name="ObjectShortName">REG_BANK[7:0][3:0]</obj_property>
-      <obj_property name="CustomSignalColor">#A0A0A4</obj_property>
-      <obj_property name="UseCustomSignalColor">true</obj_property>
-   </wvobject>
-   <wvobject fp_name="/DATA_PATH_2_tb/stop_the_clock" type="other">
+   <wvobject fp_name="/CONT_UNIT_2_tb/stop_the_clock" type="other">
       <obj_property name="ElementShortName">stop_the_clock</obj_property>
       <obj_property name="ObjectShortName">stop_the_clock</obj_property>
    </wvobject>
-   <wvobject fp_name="/DATA_PATH_2_tb/CW_WIDTH" type="other">
+   <wvobject fp_name="/CONT_UNIT_2_tb/CW_WIDTH" type="other">
       <obj_property name="ElementShortName">CW_WIDTH</obj_property>
       <obj_property name="ObjectShortName">CW_WIDTH</obj_property>
    </wvobject>
-   <wvobject fp_name="/DATA_PATH_2_tb/DATA_WIDTH" type="other">
-      <obj_property name="ElementShortName">DATA_WIDTH</obj_property>
-      <obj_property name="ObjectShortName">DATA_WIDTH</obj_property>
+   <wvobject fp_name="/CONT_UNIT_2_tb/COP_WIDTH" type="other">
+      <obj_property name="ElementShortName">COP_WIDTH</obj_property>
+      <obj_property name="ObjectShortName">COP_WIDTH</obj_property>
    </wvobject>
-   <wvobject fp_name="/DATA_PATH_2_tb/DATA_RAM_WIDTH" type="other">
-      <obj_property name="ElementShortName">DATA_RAM_WIDTH</obj_property>
-      <obj_property name="ObjectShortName">DATA_RAM_WIDTH</obj_property>
-   </wvobject>
-   <wvobject fp_name="/DATA_PATH_2_tb/ADDR_RAM_WIDTH" type="other">
-      <obj_property name="ElementShortName">ADDR_RAM_WIDTH</obj_property>
-      <obj_property name="ObjectShortName">ADDR_RAM_WIDTH</obj_property>
-   </wvobject>
-   <wvobject fp_name="/DATA_PATH_2_tb/N_ALU" type="other">
-      <obj_property name="ElementShortName">N_ALU</obj_property>
-      <obj_property name="ObjectShortName">N_ALU</obj_property>
-   </wvobject>
-   <wvobject fp_name="/DATA_PATH_2_tb/NREG_WIDTH" type="other">
-      <obj_property name="ElementShortName">NREG_WIDTH</obj_property>
-      <obj_property name="ObjectShortName">NREG_WIDTH</obj_property>
-   </wvobject>
-   <wvobject fp_name="/DATA_PATH_2_tb/clock_period" type="other">
+   <wvobject fp_name="/CONT_UNIT_2_tb/clock_period" type="other">
       <obj_property name="ElementShortName">clock_period</obj_property>
       <obj_property name="ObjectShortName">clock_period</obj_property>
    </wvobject>

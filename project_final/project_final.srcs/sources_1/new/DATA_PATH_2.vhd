@@ -36,7 +36,8 @@ entity DATA_PATH_2 is
             ADDR_RAM_WIDTH: integer:=4;
             CW_WIDTH: integer:=21;
             N_ALU: integer:=3;
-            NREG_WIDTH: integer:=3);
+            NREG_WIDTH: integer:=3;
+            COP_WIDTH: integer:=4);
     Port (  RST_i : in STD_LOGIC;
             CLK_i : in STD_LOGIC;
             CW_i : in STD_LOGIC_VECTOR(CW_WIDTH-1 downto 0);
@@ -49,7 +50,8 @@ entity DATA_PATH_2 is
             FC_o : out STD_LOGIC; 
             DATA_BUS_o : out STD_LOGIC_VECTOR (DATA_WIDTH-1 downto 0);
             REG_INST_o : out STD_LOGIC_VECTOR(DATA_RAM_WIDTH-1 downto 0);
-            ADDR_RAM_o : out STD_LOGIC_VECTOR(ADDR_RAM_WIDTH-1 downto 0));
+            ADDR_RAM_o : out STD_LOGIC_VECTOR(ADDR_RAM_WIDTH-1 downto 0);
+            REG_PC_o : out unsigned(ADDR_RAM_WIDTH-1 downto 0));
 end DATA_PATH_2;
 
 architecture Behavioral of DATA_PATH_2 is
@@ -62,17 +64,17 @@ architecture Behavioral of DATA_PATH_2 is
                         2=>  "001101110001",
                         3=>  "010000100001",
                         4=>  "010110000001",
-                        5=>  "000011110011",
+                        5=>  "000011100011",
                         6=>  "001001110011",
                         7=>  "011000001001", 
                         8=>  "000111000001",
-                        9=>  "000111000011",
+                        9=>  "000111110011",
                         10=> "011000000000",
                         11=> "000000001111",
                         12=> "000000001111", 
                         13=> "000000001001", 
-                        14=> "000000000000", 
-                        15=> "000000000001");
+                        14=> "000000000001", 
+                        15=> "000000001111");
 
     type REG_BANK_TYPE is array(2 ** NREG_WIDTH-1 downto 0) of
                                 STD_LOGIC_VECTOR(DATA_WIDTH-1 downto 0);
@@ -159,7 +161,7 @@ begin
                 if(CW_i(12) = '1') then
                     reg_DATA_RAM <= RAM_DATA_BUS;
                 else
-                    reg_DATA_RAM <= ZEROram(DATA_RAM_WIDTH-1 downto DATA_WIDTH) & REG_BANK(to_integer(unsigned(reg_ADDR_RB)));
+                    reg_DATA_RAM <= ZEROram(DATA_RAM_WIDTH-1 downto DATA_WIDTH) & ALU_RES_BUS(DATA_WIDTH-1 downto 0);
                 end if;
             end if;
             
@@ -243,6 +245,8 @@ begin
     ADDR_RB_o <= reg_ADDR_RB;
     
     REG_INST_o <= reg_INST;
+    
+    REG_PC_o <= reg_PC;
     
     ADDR_RAM_o <= RAM_ADDR_BUS;
 
