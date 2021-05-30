@@ -50,7 +50,7 @@ type FSM_STATES is (IDLE, LOAD_INST_ADDR, RAM_INST_ADDR_UPDATE, FETCH, DECODE,
                     LOAD_RAM_ADDR, LOAD_RAM_DATA, LOAD_RA_ADDR, LOAD_RB_ADDR, 
                     LOAD_ALU_REG_A, LOAD_ALU_REG_B, LOAD_INM_REG_A,
                     LOAD_RB_INTO_RAM_DATA, LOAD_RAM_DATA_INTO_ALU_REG_B,
-                    LD_OP, ST_OP, ADD_OP, SUB_OP, INC_OP, DEC_OP, BEZ_OP);
+                    LD_OP, ST_OP, ADD_OP, SUB_OP, INC_OP, DEC_OP, BEZ_OP, BEZ_INST);
 signal CURRENT_STATE: FSM_STATES;
 
 ----------------------------------------------------------------------
@@ -76,8 +76,8 @@ constant OUTPUT_ADD_OP                          :STD_LOGIC_VECTOR(CW_WIDTH-1 dow
 constant OUTPUT_SUB_OP                          :STD_LOGIC_VECTOR(CW_WIDTH-1 downto 0):="011000000000001000011";
 constant OUTPUT_INC_OP                          :STD_LOGIC_VECTOR(CW_WIDTH-1 downto 0):="100000000000001000011";
 constant OUTPUT_DEC_OP                          :STD_LOGIC_VECTOR(CW_WIDTH-1 downto 0):="101000000000001000011";
-constant OUTPUT_BEZ_OP                          :STD_LOGIC_VECTOR(CW_WIDTH-1 downto 0):="000111000000000000000";
-constant OUTPUT_BEZ_INST                        :STD_LOGIC_VECTOR(CW_WIDTH-1 downto 0):="000111000110000000000";
+constant OUTPUT_BEZ_OP                          :STD_LOGIC_VECTOR(CW_WIDTH-1 downto 0):="000110000000000000000";
+constant OUTPUT_BEZ_INST                        :STD_LOGIC_VECTOR(CW_WIDTH-1 downto 0):="000011000110000000000";
 
 
 begin
@@ -185,7 +185,7 @@ begin
                  OUTPUT_INC_OP                          when INC_OP,
                  OUTPUT_DEC_OP                          when DEC_OP,
                  OUTPUT_BEZ_OP                          when BEZ_OP,
-                 OUTPUT_BEZ_INST                          when BEZ_INST,
+                 OUTPUT_BEZ_INST                        when BEZ_INST,
                  OUTPUT_IDLE                            when others;
 
 end Behavioral;
